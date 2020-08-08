@@ -121,3 +121,84 @@
 </form>
 
 <!-- ボタン -->
+<!-- デフォルトでは暗黙にtype="submit"となっています
+
+<input>でも同じ機能を持つフォームの送信ボタンは作れますが、<>は閉じタグがあるので子要素を使ってデザインに幅を持たせることができます -->
+
+<!--フォームの送信ボタン-->
+<form>
+  お名前：<input type="text">
+  <button name="name" value="value">送信</button>
+  </form>
+  
+  <!--RubyInstallerへのリンクボタン-->
+  <button type="button" onclick="location.href='https://rubyinstaller.org/'">RubyInstaller</button>
+
+  <!-- HTMLの定型 -->
+  HTMLファイルの基本形は以下のようになります<br>
+
+<!DOCTYPE [htmlバージョン指定文]>
+<html>
+  <head>
+    <meta charset="[文字コード]">
+    <title>[タイトル]</title>
+    <link rel="stylesheet" href="[スタイルシートのパス]">
+  </head>
+  <body>
+    [ページ内容を構成する個別のタグ]<br>
+  </body>
+</html>
+
+・HTMLのバージョンを宣言：<!DOCTYPE>
+HTMLファイルの先頭に書くことで（<html>タグより前に）、そのファイルで用いるHTMLのバージョンを宣言するもの<br>
+・ファイルのタイプを指定：<html></html>
+HTML文書であることを示す働きがあり、<html>タグの範囲内ではHTML構文が使えます<br>
+・HTML文書のメタ情報をまとめる：<head></head>
+<head>タグは文書のメタ情報をまとめるタグです<br>
+・タイトル：<title></title>
+ページのタイトルを指定するためには<title>タグを使います<br>
+・リンク情報：<link> 
+<link>タグはHTML文章が連携している外部ファイルを指定するために必要なタグです
+HTML文書を視覚的に装飾をするCSSファイルを読み込むために使われることがほとんどです<br>
+・文字コードなどのHTML文書のメタ情報を指定：<meta>
+<meta>タグは<title>タグなどで表せない文書のメタ情報を指定するためのタグです
+文字コードを指定するためにcharset属性を使うケースが一般的です<br>
+・ページになる部分を指定：<body></body>
+<body>では実際にページとして表示される部分を書きます<br>
+・<body>の要素：<header>, <main>, <footer></footer>
+  <header>：導入部やナビゲーションエリアを束ねる<br>
+  <main>：本体部分を束ねる<br>
+  <footer>：直前のセクションのフッター内容を束ねる<br>
+
+    <!DOCTYPE [htmlバージョン指定文]>
+<html>
+  <head>
+    [メタ情報を記載するタグ]
+  </head>
+  <body>
+    <header>
+        [導入やナビを構成するタグ]
+    </header>
+    <main>
+        [ページ本体を構成するタグ]
+    </main>
+    <footer>
+        [ページや作者の情報を構成するタグ]
+    </footer>
+  </body>
+</html>
+
+・投稿や記事などを括る：<article></article>
+<article>は投稿や記事といった自己完結する意味のまとまりを括るためのタグです<br>
+
+・補足情報を括る：<aside></aside>
+<aside>は補足情報を示すセクションを括るために使います<br>
+
+・ナビゲーションを括る：<nav></nav>
+<nav>はナビゲーションを括るために使います<br>
+
+・役割やテーマごとにセクションを作る：<section></section>
+<section>は上記のセクションを作るタグに当てはまらないようなセクション（意味の塊）を括るために使います<br>
+
+・任意の範囲を分割：<div></div><br>
+うう
