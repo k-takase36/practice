@@ -1,7 +1,9 @@
+<!-- HTMLタグとは -->
 <h1>大見出し</h1>
 <a href = "#">2.ページ先頭へいくリンク</a>
 <strong>3.強調</strong>
 
+<!-- 見出し -->
 <h1>見出し</h1>
 <h2>見出し</h2>
 <h3>見出し</h3>
@@ -9,14 +11,18 @@
 <h5>見出し</h5>
 <h6>見出し</h6>
 
+<!-- 段落 -->
 <p>HTMLの基礎復習</p>
 
+<!-- スパン -->
 <p>復習<span style="color: blue; font-weight: bold;">「スパン」</span></p>
 
 <!-- コメント -->
 
+<!-- リンク -->
 <a href="リンク">aタグで囲んだ部分がリンクとして表示</a>
 
+<!-- 画像 -->
 <p><a href="リンク" target="_blank" rel="noopener">aタグで囲んだ部分がリンクとしてターゲット指定して新たなタグで表示</a></p>
 
 <img src="takase_portfolio_site.jpg" width="300px" height="150px" alt="朝日の画像">
@@ -27,6 +33,7 @@
 <!-- ローカルのファイル（imagesフォルダ内のruby.png）を読み込む場合、画像は「Ruby」 -->
 <img src="https://gyakuten-app.s3-ap-northeast-1.amazonaws.com/texts/html/ruby.png" width="100" height="100" alt="ローカル画像を表示する例としての宝石のRubyのイラスト">
 
+<!-- リスト -->
 <p>順序のないリスト</p>
 <ur>
     <li>HTML
@@ -47,6 +54,7 @@
     <li>SQL
 </ol>
 
+<!-- テーブル -->
 <table>
   <caption>PCスタンド購入理由</caption>
   <tr>
@@ -60,3 +68,56 @@
     <td>首もよくなる</td>
 </tr>
 </table>
+
+<!-- フォーム：<form></form> -->
+<form action="sample.php"> ～フォーム部品～ </form>
+<form action="sample.php" method="get"> ～フォーム部品～ </form>
+<form action="sample.php" method="post"> ～フォーム部品～ </form>
+
+<form action="sample.php" method="post">
+  [フォーム部品１]<br>
+  [フォーム部品２]<br>
+  [フォーム部品３]<br>
+  [...]<br>
+  [送信ボタン]
+</form>
+
+<form>
+  <input name="text1" type="text" required>＊入力必須<br>
+  <input name="text2" type="text" minlength="6">＊最低6文字<br>
+  <input name="text3" type="text" value="初期値"><br>
+  <input name="text4" type="text" size=40><br>
+  <input name="password1" type="password"><br>
+  <input name="group1" type="radio" value="g1-1">
+  <input name="group1" type="radio" value="g1-2">
+  <input name="group1" type="radio" value="g1-3">
+  <input name="group2" type="radio" value="g2"><br>
+  <input name="checkbox1" type="checkbox"><br>
+  <input name="file1" type="file" accept=".png,.jpg"><br>
+  <input type="reset"><br>
+  <input type="reset" value="入力値消去"><br>
+  <input type="submit"><br>
+  <input type="button" value="ボタン">
+</form>
+
+<form>
+  <select name="select1">
+      <option value="sample11">サンプル1-1</option>
+      <option value="sample12">サンプル1-2</option>
+      <option value="sample13">サンプル1-3</option>
+  </select>
+  <select size="3" name="select2">
+      <option value="sample21">サンプル2-1</option>
+      <option value="sample22">サンプル2-2</option>
+      <option value="sample23" selected>サンプル2-3</option>
+      <option value="sample24">サンプル2-4</option>
+      <option value="sample25">サンプル2-5</option>
+  </select>
+</form>
+
+<form>
+  <textarea name="textarea1" rows="2" cols="30">2×30</textarea><br>
+  <textarea name="textarea1" rows="6" cols="50" maxlength="300">6×50</textarea>
+</form>
+
+<!-- ボタン -->
