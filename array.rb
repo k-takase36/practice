@@ -24,8 +24,41 @@
 
 # 配列と繰り返し処理
 # 「配列から要素を取り出すときは繰り返し処理で取り出す」ということを頭に入れておく.
-users = ["satou", "tanaka", "yamada", "shimizu"]
+# users = ["satou", "tanaka", "yamada", "shimizu"]
 
-users.each do |name|
-  puts "Hello!! #{name}."
+# users.each do |name|
+#   puts "Hello!! #{name}."
+# end
+
+# 配列課題プログラム(if,each)
+puts "様々な言語のHello World"
+puts ""
+
+languages = ["Ruby", "PHP" , "Java"]
+
+languages.each do |language|
+  if language  == "Ruby"
+    puts "#{language}：puts \"Hello World!\""
+  elsif language == "PHP"
+    puts "#{language}：echo \"Hello World!\";"
+  else language == "Java"
+    puts "#{language}：System.out.println(\"Hello World!\");"
+  end
+end
+
+# 配列課題プログラム(case,each)
+puts "様々な言語のHello World"
+puts ""
+
+languages = ["Ruby", "PHP" , "Java"]
+
+languages.each do |language|
+  case language
+    when "Ruby"
+      puts "#{language}：puts \"Hello World!\""
+    when "PHP"
+      puts "#{language}：echo \"Hello World!\";"
+    when "Java"
+      puts "#{language}：System.out.println(\"Hello World!\");"
+  end
 end
