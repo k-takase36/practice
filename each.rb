@@ -28,3 +28,31 @@
 #   puts "#{prefecture} is awesome!!"
 # end
 
+# each.with_index
+# 名前の通り繰り返し処理であるeachをindex番号付きで実行するということ
+
+# users = ["satou", "tanaka", "yamada", "shimizu"]
+
+# # インデックス番号と配列の要素を同時に出力
+# users.each.with_index(1) do |name, i|
+#   puts "No.#{i} #{name}"
+# end
+
+# ages = [20, 40, 50 ,75]
+
+# ages.each.with_index(1) do |age, i|
+#   puts "No.#{i}  I'm #{age} years old."
+# end
+
+# items = ["book", "food", "movie", "music"]
+
+# items.each.with_index(1) do |item, i|
+#   puts "No.#{i} I bought #{item}"
+# end
+
+# prefectures = ["Hokkaido", "Okinawa", "Saitama", "Ibaraki"]
+
+# prefectures.each.with_index(1) do |prefecture, i|
+#   puts "No.#{i} #{prefecture} is awesome!!"
+# end
+
