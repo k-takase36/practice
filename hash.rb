@@ -95,7 +95,22 @@
 # # ageを削除
 # puts params.delete(:age)
 
-params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+# params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
 
-# ageを削除
-puts params.delete(:age) {|key| "#{key}というキーは存在しないため削除できませんでした"}
+# # ageを削除
+# puts params.delete(:age) {|key| "#{key}というキーは存在しないため削除できませんでした"}
+
+# # シンボル
+# シンボルとは : の後に任意の名前をつけた文字列のような見た目のオブジェクト
+# シンボルの特徴をまとめると以下のようになります。
+
+# 見た目が文字列っぽいので読みやすい
+# 内部的には整数なので処理が速い
+# メモリの使用効率がいい
+# 破壊的メソッドが使えないので値が勝手に変更される心配がない
+
+# # シンボルのみ
+# { name: :Tanaka, email: :hoge@co.ne.jp, address: :Saitama }
+# # => を使用した記述
+# { :name => :Tanaka, :email => :hoge@co.ne.jp, :address => :Saitama }
+
