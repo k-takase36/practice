@@ -76,6 +76,26 @@
 # # falseが返る
 # puts params3 == params4
 
-# ハッシュのサイズを調べる
-puts {}.size
-puts { name: "Tanabe", email: "hoge@co.ne.jp", address: "Tokyo" }.size
+# # ハッシュのサイズを調べる
+# puts {}.size
+# puts { name: "Tanabe", email: "hoge@co.ne.jp", address: "Tokyo" }.size
+
+# # 要素の削除
+# params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+
+# # nameを削除
+# params.delete(:name)
+
+# # ハッシュを表示
+# # p params
+
+# # 削除しようとするキーがハッシュの中に存在しなかった場合
+# params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+
+# # ageを削除
+# puts params.delete(:age)
+
+params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+
+# ageを削除
+puts params.delete(:age) {|key| "#{key}というキーは存在しないため削除できませんでした"}
