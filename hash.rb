@@ -114,3 +114,16 @@
 # # => を使用した記述
 # { :name => :Tanaka, :email => :hoge@co.ne.jp, :address => :Saitama }
 
+# ハッシュのキーのみを取り出す
+params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+
+params.each_key do |key|
+  puts "キー：#{key}"
+end
+
+# ハッシュのバリューのみを取り出す
+params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+
+params.each_value do |value|
+  puts "バリュー：#{value}"
+end
