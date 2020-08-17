@@ -55,11 +55,23 @@
 #   p key_value
 # end
 
-params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+# params = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
 
-params.each do |key_value|
-  # 配列を出力
-  puts key_value[0]
-  puts key_value[1]
-end
+# params.each do |key_value|
+#   # 配列を出力
+#   puts key_value[0]
+#   puts key_value[1]
+# end
 
+# ハッシュの比較
+params1 = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+params2 = { name: "Tanaka", email: "hoge@co.ne.jp", address: "Saitama" }
+
+# trueが返る
+puts params1 == params2
+
+params3 = { name: "Tanabe", email: "hoge@co.ne.jp", address: "Tokyo" }
+params4 = { name: "Tanaka", email: "fuga@co.ne.jp", address: "Saitama" }
+
+# falseが返る
+puts params3 == params4
