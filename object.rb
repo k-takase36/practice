@@ -98,3 +98,9 @@ end
 
 # クラスをインスタンス化
 car = Car.new
+
+# インスタンス変数
+class Car
+  # インスタンス変数は@をつけて表す
+  @color
+end
