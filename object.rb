@@ -125,20 +125,74 @@
 # car.color = "red"
 
 # colorに代入したredを表示するためには、以下のようなメソッドを定義する
+# class Car
+#   # ゲッター、colorの値を表示するメソッド（値を取り出すのでゲッターと呼ばれている）
+#   def color
+#     @color
+#   end
+# # セッター
+#   def color=(color)
+#     @color = color
+#   end
+# end
+
+# car = Car.new
+# car.color = "red"
+
+# # Carクラスのcolorに格納されたredの値を取得(ゲッターを利用)
+# puts car.color
+
+# initializeメソッド
+# initializeメソッドは、通常のメソッドとは異なり、クラスがインスタンス化された時に実行されるという特徴を持っている
+
 class Car
-  # ゲッター、colorの値を表示するメソッド（値を取り出すのでゲッターと呼ばれている）
+  # initializeメソッドで初期値を設定
+  def initialize
+    @color = "red"
+  end
+
   def color
     @color
   end
-# セッター
+
   def color=(color)
     @color = color
   end
 end
 
+# インスタンス化された瞬間にinitializeメソッドが呼び出され
+# colorにredが代入される
 car = Car.new
-car.color = "red"
 
-# Carクラスのcolorに格納されたredの値を取得(ゲッターを利用)
+# colorにredを代入する記述がいらなくなる
+# car.color = "red"
+
+# colorを呼び出すとredが表示される
 puts car.color
 
+# 柔軟にプロパティの値を変えるにはどうすれば良いか？
+# initialize メソッドには引数を渡す
+class Car
+  # initializeメソッドで引数を受け取れるようにする
+  def initialize(color)
+    @color = color
+  end
+
+  def color
+    @color
+  end
+
+  def color=(color)
+    @color = color
+  end
+end
+
+# インスタンス化する際にinitializeメソッドに値を渡す
+car1 = Car.new("red")
+car2 = Car.new("green")
+car3 = Car.new("blue")
+
+# colorを呼び出すと代入された値が表示される
+puts car1.color
+puts car2.color
+puts car3.color
