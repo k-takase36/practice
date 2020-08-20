@@ -145,54 +145,104 @@
 # initializeメソッド
 # initializeメソッドは、通常のメソッドとは異なり、クラスがインスタンス化された時に実行されるという特徴を持っている
 
+# class Car
+#   # initializeメソッドで初期値を設定
+#   def initialize
+#     @color = "red"
+#   end
+
+#   def color
+#     @color
+#   end
+
+#   def color=(color)
+#     @color = color
+#   end
+# end
+
+# # インスタンス化された瞬間にinitializeメソッドが呼び出され
+# # colorにredが代入される
+# car = Car.new
+
+# # colorにredを代入する記述がいらなくなる
+# # car.color = "red"
+
+# # colorを呼び出すとredが表示される
+# puts car.color
+
+# # 柔軟にプロパティの値を変えるにはどうすれば良いか？
+# # initialize メソッドには引数を渡す
+# class Car
+#   # initializeメソッドで引数を受け取れるようにする
+#   def initialize(color)
+#     @color = color
+#   end
+
+#   def color
+#     @color
+#   end
+
+#   def color=(color)
+#     @color = color
+#   end
+# end
+
+# # インスタンス化する際にinitializeメソッドに値を渡す
+# car1 = Car.new("red")
+# car2 = Car.new("green")
+# car3 = Car.new("blue")
+
+# # colorを呼び出すと代入された値が表示される
+# puts car1.color
+# puts car2.color
+# puts car3.color
+
+# アクセサ（セッター、ゲッター）
+# Rubyのクラスでは、インスタンス変数に値を代入したり、値を取り出したりといった時に、専用のメソッドを定義
+# →これらのメソッドのことをセッター、ゲッターと言う
+
 class Car
-  # initializeメソッドで初期値を設定
-  def initialize
-    @color = "red"
-  end
 
-  def color
-    @color
-  end
-
-  def color=(color)
-    @color = color
-  end
-end
-
-# インスタンス化された瞬間にinitializeメソッドが呼び出され
-# colorにredが代入される
-car = Car.new
-
-# colorにredを代入する記述がいらなくなる
-# car.color = "red"
-
-# colorを呼び出すとredが表示される
-puts car.color
-
-# 柔軟にプロパティの値を変えるにはどうすれば良いか？
-# initialize メソッドには引数を渡す
-class Car
-  # initializeメソッドで引数を受け取れるようにする
   def initialize(color)
     @color = color
   end
 
-  def color
-    @color
-  end
+#   # ゲッター
+#   def color
+#     @color
+#   end
 
-  def color=(color)
-    @color = color
-  end
-end
+#   # セッター
+#   def color=(color)
+#     @color = color
+#   end
+# end
 
-# インスタンス化する際にinitializeメソッドに値を渡す
-car1 = Car.new("red")
-car2 = Car.new("green")
-car3 = Car.new("blue")
+# # より簡単に効率よく記述する方法
+# # attr_reader（ゲッター）
+# # attr_writer（セッター）を使う
 
-# colorを呼び出すと代入された値が表示される
-puts car1.color
-puts car2.color
-puts car3.color
+# class Car
+
+#   # ゲッター
+#   attr_reader :color
+#   # セッター
+#   attr_writer :color
+
+#   def initialize(color)
+#     @color = color
+#   end
+
+# end
+
+#   # このゲッターとセッターは、attr_accessorを用いるとさらに簡潔にまとめることができる
+#   class Car
+
+#     # セッター&ゲッター
+#     attr_accessor :color
+  
+#     def initialize(color)
+#       @color = color
+#     end
+  
+#   end
