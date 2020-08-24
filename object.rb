@@ -151,141 +151,171 @@
 #     @color = "red"
 #   end
 
-#   def color
-#     @color
-#   end
+# #   def color
+# #     @color
+# #   end
 
-#   def color=(color)
-#     @color = color
-#   end
-# end
+# #   def color=(color)
+# #     @color = color
+# #   end
+# # end
 
-# # インスタンス化された瞬間にinitializeメソッドが呼び出され
-# # colorにredが代入される
-# car = Car.new
+# # # インスタンス化された瞬間にinitializeメソッドが呼び出され
+# # # colorにredが代入される
+# # car = Car.new
 
-# # colorにredを代入する記述がいらなくなる
-# # car.color = "red"
+# # # colorにredを代入する記述がいらなくなる
+# # # car.color = "red"
 
-# # colorを呼び出すとredが表示される
-# puts car.color
+# # # colorを呼び出すとredが表示される
+# # puts car.color
 
-# # 柔軟にプロパティの値を変えるにはどうすれば良いか？
-# # initialize メソッドには引数を渡す
-# class Car
-#   # initializeメソッドで引数を受け取れるようにする
-#   def initialize(color)
-#     @color = color
-#   end
+# # # 柔軟にプロパティの値を変えるにはどうすれば良いか？
+# # # initialize メソッドには引数を渡す
+# # class Car
+# #   # initializeメソッドで引数を受け取れるようにする
+# #   def initialize(color)
+# #     @color = color
+# #   end
 
-#   def color
-#     @color
-#   end
+# #   def color
+# #     @color
+# #   end
 
-#   def color=(color)
-#     @color = color
-#   end
-# end
+# #   def color=(color)
+# #     @color = color
+# #   end
+# # end
 
-# # インスタンス化する際にinitializeメソッドに値を渡す
-# car1 = Car.new("red")
-# car2 = Car.new("green")
-# car3 = Car.new("blue")
+# # # インスタンス化する際にinitializeメソッドに値を渡す
+# # car1 = Car.new("red")
+# # car2 = Car.new("green")
+# # car3 = Car.new("blue")
 
-# # colorを呼び出すと代入された値が表示される
-# puts car1.color
-# puts car2.color
-# puts car3.color
+# # # colorを呼び出すと代入された値が表示される
+# # puts car1.color
+# # puts car2.color
+# # puts car3.color
 
-# アクセサ（セッター、ゲッター）
-# Rubyのクラスでは、インスタンス変数に値を代入したり、値を取り出したりといった時に、専用のメソッドを定義
-# →これらのメソッドのことをセッター、ゲッターと言う
-
-class Car
-
-  def initialize(color)
-    @color = color
-  end
-
-#   # ゲッター
-#   def color
-#     @color
-#   end
-
-#   # セッター
-#   def color=(color)
-#     @color = color
-#   end
-# end
-
-# # より簡単に効率よく記述する方法
-# # attr_reader（ゲッター）
-# # attr_writer（セッター）を使う
+# # アクセサ（セッター、ゲッター）
+# # Rubyのクラスでは、インスタンス変数に値を代入したり、値を取り出したりといった時に、専用のメソッドを定義
+# # →これらのメソッドのことをセッター、ゲッターと言う
 
 # class Car
-
-#   # ゲッター
-#   attr_reader :color
-#   # セッター
-#   attr_writer :color
 
 #   def initialize(color)
 #     @color = color
 #   end
 
-# end
+# #   # ゲッター
+# #   def color
+# #     @color
+# #   end
 
-#   # このゲッターとセッターは、attr_accessorを用いるとさらに簡潔にまとめることができる
-#   class Car
+# #   # セッター
+# #   def color=(color)
+# #     @color = color
+# #   end
+# # end
 
-#     # セッター&ゲッター
-#     attr_accessor :color
+# # # より簡単に効率よく記述する方法
+# # # attr_reader（ゲッター）
+# # # attr_writer（セッター）を使う
+
+# # class Car
+
+# #   # ゲッター
+# #   attr_reader :color
+# #   # セッター
+# #   attr_writer :color
+
+# #   def initialize(color)
+# #     @color = color
+# #   end
+
+# # end
+
+# #   # このゲッターとセッターは、attr_accessorを用いるとさらに簡潔にまとめることができる
+# #   class Car
+
+# #     # セッター&ゲッター
+# #     attr_accessor :color
   
+# #     def initialize(color)
+# #       @color = color
+# #     end
+  
+# #   end
+
+# #   # 今までの全てのメソッドを効率よく柔軟に使用すると以下のようなコードになる
+#   class Car
+#     attr_accessor :color
 #     def initialize(color)
 #       @color = color
 #     end
-  
 #   end
+  
+#   car1 = Car.new("red")
+#   car2 = Car.new("green")
+#   car3 = Car.new("blue")
+  
+#   puts car1.color
+#   puts car2.color
+#   puts car3.color
 
-#   # 今までの全てのメソッドを効率よく柔軟に使用すると以下のようなコードになる
-  class Car
-    attr_accessor :color
-    def initialize(color)
-      @color = color
-    end
+
+#   # Carクラスに、さらにpriceやcapacityなどの値を追加
+#   class Car
+#     attr_accessor :color, :price, :capacity
+#     def initialize(color, price, capacity)
+#       @color = color
+#       @price = price
+#       @capacity = capacity
+#     end
+#   end
+  
+#   car1 = Car.new("red", 1000021, 4)
+#   car2 = Car.new("blue", 1002000, 20)
+#   car3 = Car.new("green", 3000000, 6)
+  
+#   puts car1.color
+#   puts car1.price
+#   puts car1.capacity
+  
+#   puts car2.color
+#   puts car2.price
+#   puts car2.capacity
+  
+#   puts car3.color
+#   puts car3.price
+#   puts car3.capacity
+
+# プログラム作成
+
+main.rb
+class Task
+
+  @count = 0
+
+  def initialize(**params)
+
   end
-  
-  car1 = Car.new("red")
-  car2 = Car.new("green")
-  car3 = Car.new("blue")
-  
-  puts car1.color
-  puts car2.color
-  puts car3.color
+end
 
+class Todo
 
-  # Carクラスに、さらにpriceやcapacityなどの値を追加
-  class Car
-    attr_accessor :color, :price, :capacity
-    def initialize(color, price, capacity)
-      @color = color
-      @price = price
-      @capacity = capacity
-    end
-  end
-  
-  car1 = Car.new("red", 1000021, 4)
-  car2 = Car.new("blue", 1002000, 20)
-  car3 = Car.new("green", 3000000, 6)
-  
-  puts car1.color
-  puts car1.price
-  puts car1.capacity
-  
-  puts car2.color
-  puts car2.price
-  puts car2.capacity
-  
-  puts car3.color
-  puts car3.price
-  puts car3.capacity
+end
+
+# タスクのインスタンス化
+task1 = Task.new(name: "洗濯", content: "8時までに干し終える")
+task2 = Task.new(name:"仕事", content: "9時〜18時まで仕事")
+task3 = Task,new(name: "買い物", content: "卵, ネギ")
+
+# Todoをインスタンス化
+todo = Todo.new
+todo.add(task1)
+todo.add(task2)
+todo.add(task3)
+todo.info
+todo.delete(id: 1)
+todo.info
