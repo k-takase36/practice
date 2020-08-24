@@ -294,7 +294,7 @@
 
 main.rb
 class Task
-  
+
   @count = 0
 
   def initialize(**params)
@@ -306,10 +306,12 @@ class Todo
 
 end
 
+# タスクのインスタンス化
 task1 = Task.new(name: "洗濯", content: "8時までに干し終える")
 task2 = Task.new(name:"仕事", content: "9時〜18時まで仕事")
 task3 = Task,new(name: "買い物", content: "卵, ネギ")
 
+# Todoをインスタンス化
 todo = Todo.new
 todo.add(task1)
 todo.add(task2)
