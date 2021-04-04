@@ -1,8 +1,11 @@
 class Main {
   public static void main(String[] args) {
-    String[] names = {"にんじゃわんこ","ひつじ仙人", "ベイビーわんこ"};
+    int[] numbers = {1,4,6,9,13,16};
 
-    for(String name:names) {
+    int oddSum = 0;
+    int evenSum = 0;
+
+    for(String name:names) 
       System.out.println("私の名前は" + name + "です");
     }
   }
