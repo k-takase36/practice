@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 class Person {
   // Main.javaからPersonクラスに以下のメソッドすべてを移動
   public static void printData(String name, int age, double height, double weight) {
@@ -7,7 +9,8 @@ class Person {
     System.out.println("体重は" + weight + "kgです");
 
     double bmi = bmi(height, weight);
-    System.out.println("BMIは" + bmi + "です");
+    // Mathクラスのroundメソッドを用いて、BMIを四捨五入して出力
+    System.out.println("BMIは" + Math.round(bmi) + "です");
 
     if (isHealthy(bmi)) {
       System.out.println("標準値です");
