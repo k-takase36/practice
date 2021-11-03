@@ -78,10 +78,38 @@
   </label> -->
 
   <!-- 復習：ボタンをクリックしたら、テキスト文字の色が変わる -->
-  <div id="textColor">色が変わる</div>
+  <!-- <div id="textColor">色が変わる</div>
   <input type="button" id="triggerButton" value="変更ボタン">
-  <input type="button" id="changeButton" value="戻るボタン">
-  
+  <input type="button" id="changeButton" value="戻るボタン"> -->
+
+  <!-- 練習：要素を取得 -->
+  <!-- idで要素を取得 -->
+  <h1 id="place">場所</h1>
+  <p id="sea">海</p>
+  <p id="mountain">山</p>
+  <p id="river">川</p>
+
+  <!-- タグ名で要素を取得 -->
+  <h2>食べ物</h2>
+  <div>肉</div>
+  <div>魚</div>
+  <div>野菜</div>
+
+  <!-- クラス名で要素の取得 -->
+  <h3>乗り物</h3>
+  <ul class="vehicleList">
+    <li class="car">車</li>
+    <li class="bike">バイク</li>
+    <li class="bus">バス</li>
+  </ul>
+
+  <!-- name属性で要素を取得 -->
+  <input type="text" name="textName" value="テキスト">
+
+  <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
+  <input type="button" id="triggerButton" value="ボタン" onclick="buttonObj();">
+
+
   <script src="practice.js"></script>
 </body>
 </html>

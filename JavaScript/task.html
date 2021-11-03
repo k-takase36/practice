@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+  <!-- 課題：ボタンクリックしたら、プルダウンAの項目がプルダウンBへ追加される -->
+
+  <!-- ①Aのプルダウン -->
+  <!-- select要素でプルダウンメニューを配置、option要素で選択肢を配置 -->
+  <select name="categoryA" id="categoryA">  <!-- Aの要素（select）、属性（name）、属性値（"categoryA"）、属性（id）、属性値（"categoryA"）-->
+    <option value="0">選択してください</option>  <!-- Aの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
+    <option value="1">あいう</option> <!-- Aの子要素（option）、属性（value）、属性値（"0"、テキスト（あいう）-->
+    <option value="2">かきく</option> <!-- Aの子要素（option）、属性（value）、属性値（"1"、テキスト（かきく）-->
+    <option value="3">さしす</option> <!-- Aの子要素（option）、属性（value）、属性値（"2"、テキスト（さしす）-->
+  </select>
+
+  <!-- ②Bのプルダウン -->
+  <select name="categoryB" id="categoryB">  <!-- Bの要素（select）、属性（name）、属性値（"categoryB"）、属性（id）、属性値（"categoryB"）-->
+    <option value="4">選択してください</option>  <!-- Bの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
+    <option value="5">たちつ</option> <!-- Bの子要素（option）、属性（value）、属性値（"3"）、テキスト（たちつ）-->
+    <option value="6">なにぬ</option> <!-- Bの子要素（option）、属性（value）、属性値（"4"）、テキスト（なにぬ）-->
+    <option value="7">はひふ</option> <!-- Bの子要素（option）、属性（value）、属性値（"5"）、テキスト（はひふ）-->
+  </select><br>
+
+  <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
+  <input type="button" value="ボタン" onclick="createPullDown();"> 
+  
+  <script src="task.js"></script>
+</body>
+</html>

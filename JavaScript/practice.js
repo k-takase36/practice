@@ -175,8 +175,8 @@
 //   textColor.style.color = 'red';
 // });
 
-// // 復習：変更ボタンで赤を追加（setAttributeメソッド）、戻るボタンで属性が外れる（removeAttributeメソッド）
-// // 1.変更ボタンで赤を追加（setAttributeメソッド）
+// 復習：変更ボタンで赤を追加（setAttributeメソッド）、戻るボタンで属性が外れる（removeAttributeメソッド）
+// 1.変更ボタンで赤を追加（setAttributeメソッド）
 // let triggerButton = document.getElementById('triggerButton');
 // triggerButton.addEventListener('click', () => {
 //   let textColor = document.getElementById('textColor');
@@ -189,3 +189,71 @@
 //   let textColor = document.getElementById('textColor');
 //   textColor.removeAttribute('class');
 // });
+
+// 練習：A .プルダウン（あいう） B. プルダウン（かきく）
+// ボタンクリックしたら、Aの項目がBへ追加される
+// function createPullDown () {
+//   // プルダウンA  親要素の取得
+//   let catA = document.getElementById('categoryA');
+//   alert(catA);
+//   catA.style.color = 'gray';
+  
+//   // 子要素の取得
+//   let catChildA = catA.children;
+//   alert(catChildA);
+  
+  
+//   // プルダウンB  親要素の取得
+//   let catB = document.getElementById('categoryB');
+//   alert(catB);
+//   catB.style.color = 'green';
+// };
+
+// 仮説２（NG）
+// function createSelectBox(){
+//   //連想配列の配列
+//   let array = [
+//     {val:"01", txt:"さしす"},
+//     {val:"02", txt:"かきく"},
+//     {val:"03", txt:"あいう"}
+//   ];
+ 
+//   // 連想配列をループ処理で値を取り出してセレクトボックスにセットする
+//   for(let i = 0; i < array.length; i++){
+//     let op = document.createElement("option");
+//     op.value = array[i].val;  //value値
+//     op.text = array[i].txt;   //テキスト値
+//     // document.getElementById('categoryB').prepend(op); //categoryBを取得後、prependメソッドで先頭へ追加
+//     let categoryB = document.getElementById("categoryB")
+//     categoryB.option([value='6']).prepend(op);
+//   }
+// };
+
+// 要素を取得
+function buttonObj() {
+  
+  // idで要素（h1）を取得（getElementByIdメソッド）
+  let place = document.getElementById('place');
+  place.style.color = 'red';
+
+  // idで要素（p）を取得（getElementByIdメソッド）
+  let mountain = document.getElementById('mountain');
+  mountain.style.backgroundColor = 'gray';
+  
+  // タグ名で要素（div）を取得(getElementsByTagNameメソッド)
+  let tagName = document.getElementsByTagName('h2');
+  alert(tagName);
+  console.log(tagName);
+  
+  // class名で要素（ul）を取得（getElementsByClassNameメソッド）
+  let vehicleList  = document.getElementsByClassName('vehicleList');
+  alert(vehicleList);
+  console.log(vehicleList);
+
+  // nameで要素を取得（getElementsByClassNameメソッド）
+  let textName = document.getElementsByName('textName');
+  console.log(textName); 
+
+  
+
+};
