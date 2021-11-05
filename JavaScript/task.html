@@ -8,11 +8,16 @@
   <link rel="stylesheet" href="task.css">
 </head>
 <body>
+
+  <input type="text" id="taka" value="aaa" /><br/>
+  <input type="text" id="seko" value="" style="border: 2px solid;" />
+  <hr />
+
   <!-- 課題：ボタンクリックしたら、プルダウンAの項目がプルダウンBへ追加される -->
 
   <!-- ①Aのプルダウン -->
   <!-- select要素でプルダウンメニューを配置、option要素で選択肢を配置 -->
-  <select name="categoryA" id="categoryA">  <!-- Aの要素（select）、属性（name）、属性値（"categoryA"）、属性（id）、属性値（"categoryA"）-->
+  <select name="categoryA" id="categoryA" style="border-color: aqua;">  <!-- Aの要素（select）、属性（name）、属性値（"categoryA"）、属性（id）、属性値（"categoryA"）-->
     <option value="0">選択してください</option>  <!-- Aの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
     <option value="1">あいう</option> <!-- Aの子要素（option）、属性（value）、属性値（"0"、テキスト（あいう）-->
     <option value="2">かきく</option> <!-- Aの子要素（option）、属性（value）、属性値（"1"、テキスト（かきく）-->
@@ -26,9 +31,17 @@
     <option value="6">なにぬ</option> <!-- Bの子要素（option）、属性（value）、属性値（"4"）、テキスト（なにぬ）-->
     <option value="7">はひふ</option> <!-- Bの子要素（option）、属性（value）、属性値（"5"）、テキスト（はひふ）-->
   </select><br>
-
+  
   <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
   <input type="button" value="ボタン" onclick="createPullDown();"> 
+  
+  <!-- 課題2：ボタンクリックしたら、「div消えて〜」が削除されて→「div追加」が表示される -->
+  <!-- 要素の削除、作成、追加 -->
+  <hr>
+  <div id="parent" style="background-color:beige"> <!--要素（div）、属性（id） 、属性値（"parent"）、属性（style） 、属性値（"background-color:beige"）-->
+    <div>消えて〜〜</div> <!--要素（div）、属性（id）、属性値（"delete"） --> 
+    <!-- <div>追加〜〜</div> -->
+  </div>
   
   <script src="task.js"></script>
 </body>

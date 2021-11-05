@@ -229,6 +229,34 @@
 //   }
 // };
 
+// 練習 (課題1)
+function pullDown2() {
+  // プルダウンA 要素取得
+  let changeA = document.getElementById('pullA');
+  alert(changeA);
+  changeA.style.backgroundColor = 'blue';
+
+  // プルダウンA 子要素取得
+  let changeChildA = document.getElementById('pullA');
+  let getChildA = changeChildA.children;
+  alert(getChildA);
+  console.log('getChildA'); // 子要素を取得
+   
+  // // Aの子要素（option）をfor文で繰り返す
+  // for (let i = 0; i < getChildA.length; i++) { // let i = 0;でi（index）を初期化（index0から始まる。1なら1から始まる）、i < getChildA.length;でAの子要素（option）の長さ（子要素の数）だけ処理を繰り返す。i++でiを1ずつ足していく。
+  //   console.log(getChildA[i]); // 
+  // }
+
+  // プルダウンB 要素取得
+  let changeB = document.getElementById('pullB');
+  alert(changeB);
+  changeB.style.backgroundColor = 'green';
+
+};
+
+
+// 練習
+// ボタン（イベント：onclick）
 // 要素を取得
 function buttonObj() {
   
@@ -253,7 +281,10 @@ function buttonObj() {
   // nameで要素を取得（getElementsByClassNameメソッド）
   let textName = document.getElementsByName('textName');
   console.log(textName); 
+};
 
-  
-
+// イベント（onChange）
+function changeObj(value) {
+  let textChange = document.getElementById('textChange');
+  console.log(textChange + value);
 };
