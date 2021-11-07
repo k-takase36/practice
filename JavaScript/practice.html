@@ -82,60 +82,44 @@
   <input type="button" id="triggerButton" value="変更ボタン">
   <input type="button" id="changeButton" value="戻るボタン"> -->
 
-  <!-- 課題1：ボタンクリックしたら、プルダウンAの項目がプルダウンBへ追加される -->
-
-  <!-- ①Aのプルダウン -->
-  <!-- select要素でプルダウンメニューを配置、option要素で選択肢を配置 -->
-  <select  id="categoryA" name="categoryA">  <!-- Aの要素（select）、属性（id）、属性値（"categoryA"）、属性（name）、属性値（"categoryA"）、-->
-    <option value="0">選択してください</option>  <!-- Aの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
-    <option value="1">あいう</option> <!-- Aの子要素（option）、属性（value）、属性値（"0"、テキスト（あいう）-->
-    <option value="2">かきく</option> <!-- Aの子要素（option）、属性（value）、属性値（"1"、テキスト（かきく）-->
-    <option value="3">さしす</option> <!-- Aの子要素（option）、属性（value）、属性値（"2"、テキスト（さしす）-->
-  </select>
-
-  <!-- ②Bのプルダウン -->
-  <select id="categoryB" name="categoryB">  <!-- Bの要素（select）、属性（id）、属性値（"categoryB"）、属性（name）、属性値（"categoryB"）、-->
-    <option value="4">選択してください</option>  <!-- Bの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
-    <option value="5">たちつ</option> <!-- Bの子要素（option）、属性（value）、属性値（"3"）、テキスト（たちつ）-->
-    <option value="6">なにぬ</option> <!-- Bの子要素（option）、属性（value）、属性値（"4"）、テキスト（なにぬ）-->
-    <option value="7">はひふ</option> <!-- Bの子要素（option）、属性（value）、属性値（"5"）、テキスト（はひふ）-->
-  </select><br>
-
-  <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
-  <input type="button" value="ボタン" onclick="createPullDown();"> 
-
-
   <!-- 練習（課題1）-->
-  <br><br>
   <select name="pullA" id="pullA">
-    <option value="00">選択して下さい</option>
-    <option value="01">アイウ</option>
-    <option value="02">カキク</option>
-    <option value="03">サシス</option>
+    <option value="0">選択して下さい</option>
+    <option value="1">アイウ</option>
+    <option value="2">カキク</option>
+    <option value="3">サシス</option>
   </select>
   <select name="pullB" id="pullB">
-    <option value="04">選択して下さい</option>
-    <option value="05">タチツ</option>
-    <option value="06">ナニヌ</option>
-    <option value="07">ハヒフ</option>
+    <option value="4">選択して下さい</option>
+    <option value="5">タチツ</option>
+    <option value="6">ナニヌ</option>
+    <option value="7">ハヒフ</option>
   </select><br>
 
   <input type="button" id="pushButton" value="練習ボタン" onclick="pullDown2();">
 
   <!-- 練習：要素を取得 -->
-  <!-- idで要素を取得 -->
-  <h1 id="place">場所</h1>
-  <p id="sea">海</p>
-  <p id="mountain">山</p>
-  <p id="river">川</p>
+  <!-- 要素を取得 -->
+  <hr>
+  <div id="placeBox">
+    <h1>場所</h1>
+    <p>海</p>
+    <p>山</p>
+  </div> 
+  <input type="text" id="taka" value="aaa" /><br/>
+  <input type="text" id="seko" value="" style="border: 2px solid;" />
+  <input type="button" value="ボタン" onclick="placePullDown();">
 
   <!-- タグ名で要素を取得 -->
+  <hr>
   <h2>食べ物</h2>
   <div>肉</div>
   <div>魚</div>
   <div>野菜</div>
+  <input type="button" value="ボタン">
 
   <!-- クラス名で要素の取得 -->
+  <hr>
   <h3>乗り物</h3>
   <ul class="vehicleList">
     <li class="car">車</li>
@@ -143,6 +127,7 @@
     <li class="bus">バス</li>
   </ul>
 
+  <hr>
   <!-- name属性で要素を取得 -->
   <!-- <input type="text" name="textName" value="テキスト"> -->
 

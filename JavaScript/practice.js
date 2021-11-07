@@ -256,10 +256,26 @@ function pullDown2() {
 
 
 // 練習
-// ボタン（イベント：onclick）
-// 要素を取得
-function buttonObj() {
+// 要素の取得
+function placePullDown() {
+  let placeElm = document.getElementById('placeBox'); // 親要素を取得：OK
+  // placeElm.style.color = 'red' // 親要素のスタイルカラーを変える：OK
   
+  let placeChildElms = placeElm.children; // 子要素を取得：OK
+  placeChildElms[0].id = 'place'; // 子要素のidを取得
+  placeChildElms[0].style.color = 'red';  // 子要素のスタイルカラーを変える：OK
+  placeChildElms[1].style.color = 'blue'; // 子要素の4番目のスタイルカラーを変える：OK
+  placeChildElms[2].classList = 'mountain'; // 子要素のクラスを取得：OK
+  
+  let takaElm = document.getElementById('taka');
+  takaElm.value = takaElm.value + '様';
+  takaElm.remove();
+  
+};
+
+//
+
+function buttonObj() {
   // idで要素（h1）を取得（getElementByIdメソッド）
   let place = document.getElementById('place');
   place.style.color = 'red';
