@@ -83,7 +83,7 @@
   <input type="button" id="changeButton" value="戻るボタン"> -->
 
   <!-- 練習（課題1）-->
-  <select name="pullA" id="pullA">
+  <!-- <select name="pullA" id="pullA">
     <option value="0">選択して下さい</option>
     <option value="1">アイウ</option>
     <option value="2">カキク</option>
@@ -97,48 +97,56 @@
   </select><br>
 
   <input type="button" id="pushButton" value="練習ボタン" onclick="pullDown2();">
+  <hr> -->
 
   <!-- 練習：要素を取得 -->
   <!-- 要素を取得 -->
-  <hr>
   <div id="placeBox">
     <h1>場所</h1>
     <p>海</p>
     <p>山</p>
   </div> 
+
   <input type="text" id="taka" value="aaa" /><br/>
   <input type="text" id="seko" value="" style="border: 2px solid;" />
-  <input type="button" value="ボタン" onclick="placePullDown();">
+  <input type="button" id="placeButton" value="ボタン" onclick="placeContent();">
 
-  <!-- タグ名で要素を取得 -->
+  <!-- 要素を取得 -->
   <hr>
-  <h2>食べ物</h2>
-  <div>肉</div>
-  <div>魚</div>
-  <div>野菜</div>
-  <input type="button" value="ボタン">
+  <div id="foodBox">
+    <h2>食べ物</h2>
+    <div>肉</div>
+    <div>魚</div>
+    <div>野菜</div>
+  </div>
+  <input type="button" id="foodButton" value="ボタン" onclick="foodContent();">
 
-  <!-- クラス名で要素の取得 -->
+  <!-- 要素の取得 -->
   <hr>
-  <h3>乗り物</h3>
-  <ul class="vehicleList">
-    <li class="car">車</li>
-    <li class="bike">バイク</li>
-    <li class="bus">バス</li>
-  </ul>
+  <div class="vehicleBox">
+    <h3>乗り物</h3>
+    <ul>
+      <li>車</li>
+      <li>バイク</li>
+      <li>バス</li>
+    </ul>
+  </div>
+  <input type="text" id="vehicleText" value="">
+  <input type="button" id="vehicleButton" value="ボタン" onclick="vehicleContent();">
 
   <hr>
+
   <!-- name属性で要素を取得 -->
   <!-- <input type="text" name="textName" value="テキスト"> -->
 
   <!-- ボタン（イベント：onChange）：テキスト入力してフォーカスが外れた時にonChangeイベントが発生
   ユーザーの入力に合わせて表示内容を変えたい場合-->
-  <input type="text" id="textChange" value="" onchange="changeObj(this.value);">
+  <!-- <input type="text" id="textChange" value="" onchange="changeObj(this.value);"> -->
 
   <!-- ボタン（イベント：onclick）：ボタンをクリックした時にonChangeイベントが発生
   ユーザーがボタンクリックに合わせて表示内容を変えたい場合 -->
   <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
-  <input type="button" id="triggerButton" value="ボタン" onclick="buttonObj();">
+  <!-- <input type="button" id="triggerButton" value="ボタン" onclick="buttonObj();"> -->
 
 
 

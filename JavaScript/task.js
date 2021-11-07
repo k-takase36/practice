@@ -76,7 +76,7 @@ function createPullDown() { // funstionで関数宣言し、createSelectBox関�
   addElm.id = 'add';
   addElm.textContent = '追加〜〜';
 
-  // ⑤追加する要素を追加
+  // ⑤要素を追加
   parElm.append(addElm);
 
 };
