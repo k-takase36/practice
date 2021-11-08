@@ -262,7 +262,7 @@ function placeContent() {
   // placeElm.style.color = 'red' // 親要素のスタイルカラーを変える：OK
 
   let placeChildElms = placeElm.children; // 子要素を取得：OK
-  placeChildElms[0].id = 'place'; // 子要素のidを取得：OK // childrenの返り値は配列になる為、インデックス番号で取得
+  placeChildElms[0].id = 'place'; // 子要素のidを取得：OK // childrenの戻り値は配列になる為、インデックス番号で取得
   placeChildElms[0].style.color = 'red';  // 子要素のスタイルカラーを変える：OK
   placeChildElms[1].style.color = 'blue'; // 子要素の2番目のスタイルカラーを変える：OK
   placeChildElms[2].classList = 'mountain'; // 子要素のクラスの取得：OK
@@ -288,7 +288,7 @@ function foodContent() {
   let foodElm = document.getElementById('foodBox');
   foodElm.style.color = 'orange';
 
-  let foodChildElms = foodElm.children;  
+  let foodChildElms = foodElm.children; 
   foodChildElms[0].style.color = 'red';
   foodChildElms[0].id = 'food';
   foodChildElms[3].style.backgroundColor = 'gray';
@@ -310,13 +310,14 @@ function vehicleContent() {
   vehicleElms[0].style.color = 'green'; // classの戻り値は配列になるため、インデックス番号で取得
   
   let vehicleChildElms = vehicleElms[0].children; // 子要素取得（h3,ul）
+  // console.log(vehicleChildElms);
   vehicleChildElms[0].style.color = 'orange';
   vehicleChildElms[1].style.color = 'blue';
-  console.log(vehicleChildElms[0]);
-  console.log(vehicleChildElms[1]);
+  // console.log(vehicleChildElms[0]);
+  // console.log(vehicleChildElms[1]);
 
   let vehicleGrandChildElms = vehicleChildElms[1].children; // 孫要素（子要素の中の子要素）取得（li）
-  console.log(vehicleGrandChildElms[0]);
+  // dconsole.log(vehicleGrandChildElms[0]);
   vehicleGrandChildElms[0].style.color = 'green';
   vehicleGrandChildElms[0].id = 'car';
   vehicleGrandChildElms[0].id = '車';
@@ -325,7 +326,7 @@ function vehicleContent() {
   vehicleGrandChildElms[1].classList = 'バイク';
   vehicleGrandChildElms[2].style.color = 'red';
   vehicleGrandChildElms[2].id = 'bus';
-  vehicleGrandChildElms[2].id = 'バス';
+  vehicleGrandChildElms[2].id = vehicleGrandChildElms[2].id + 'バス';
 
   let vehicleTextElm = document.getElementById('vehicleText');
   vehicleTextElm.value = '乗物テキスト';
@@ -340,6 +341,33 @@ function vehicleContent() {
   vehicleButtonElm.id = '乗物ボタン';
   vehicleButtonElm.type = 'text';
 
+};
+
+// 練習4
+// プルダウン(Aの選択項目を削除→Bの選択項目へ追加)
+function childPullDown() {
+  let likeVegElm = document.getElementById('likeVeg');
+  let likeVegChildElms = likeVegElm.children;
+  let likeCookElm = document.getElementById('likeCook');
+  let likeChildCookElms = likeCookElm.children;
+  likeCookElm.insertBefore(likeVegChildElms[1], likeChildCookElms[1]);
+  likeCookElm.insertBefore(likeVegChildElms[1], likeChildCookElms[2]);
+  likeCookElm.insertBefore(likeVegChildElms[1], likeChildCookElms[3]);
+  
+  // for文を試したがまだ出来ない、、
+  // for (let i = 0; i < likeVegChildElms.length; i++) {
+  //   console.log(likeVegChildElms);
+  // }
+};
+
+// 練習5
+function task2Button() {
+  let parElm = document.getElementById('parent');
+  let parChildElms = parElm.children;
+  parChildElms[0].remove();
+  let addElm = document.createElement('div');
+  addElm.textContent = '追加〜〜';
+  parElm.appendChild(addElm);
 };
 
 

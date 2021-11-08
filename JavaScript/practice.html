@@ -99,8 +99,9 @@
   <input type="button" id="pushButton" value="練習ボタン" onclick="pullDown2();">
   <hr> -->
 
-  <!-- 練習：要素を取得 -->
+  <!-- 練習1：要素を取得、変更 -->
   <!-- 要素を取得 -->
+  <div>練習1</div>
   <div id="placeBox">
     <h1>場所</h1>
     <p>海</p>
@@ -111,8 +112,9 @@
   <input type="text" id="seko" value="" style="border: 2px solid;" />
   <input type="button" id="placeButton" value="ボタン" onclick="placeContent();">
 
-  <!-- 要素を取得 -->
+  <!-- 練習2：要素を取得、変更 -->
   <hr>
+  <div>練習2</div>
   <div id="foodBox">
     <h2>食べ物</h2>
     <div>肉</div>
@@ -121,8 +123,9 @@
   </div>
   <input type="button" id="foodButton" value="ボタン" onclick="foodContent();">
 
-  <!-- 要素の取得 -->
+  <!-- 練習3：要素の取得、変更 -->
   <hr>
+  <div>練習3</div>
   <div class="vehicleBox">
     <h3>乗り物</h3>
     <ul>
@@ -134,7 +137,36 @@
   <input type="text" id="vehicleText" value="">
   <input type="button" id="vehicleButton" value="ボタン" onclick="vehicleContent();">
 
+  <!-- 練習4：要素の取得、変更 -->
   <hr>
+  <div>練習4</div>
+  <select id="likeVeg">
+    <option value="1">娘の好きな料理A</option>
+    <option value="2">1.たまごやき  </option>
+    <option value="3">2.シャケ</option>
+    <option value="4">3.たきこみごはん</option>
+  </select>
+
+  <select id="likeCook">
+    <option value="5">娘の好きな料理B</option>
+    <option value="6">4.とんじる</option>
+    <option value="7">5.オムライス</option>
+    <option value="8">6.とうふハンバーグ</option>
+  </select><br>
+
+  <input type="button" id="triggerButton" value="ボタン" onclick="childPullDown();"
+
+
+  <!-- 課題2：ボタンクリックしたら、「div消えて〜」が削除されて→「div追加」が表示される -->
+  <!-- 要素の削除、作成、追加 -->
+  <hr>
+  <div>課題2</div>
+  <div id="parent" style="background-color: beige"> 
+    <div>消えて〜〜</div> 
+    <!-- <div>追加〜〜</div> -->
+  </div>
+
+  <input type="button" value="ボタン" onclick="task2Button();">
 
   <!-- name属性で要素を取得 -->
   <!-- <input type="text" name="textName" value="テキスト"> -->
@@ -147,7 +179,6 @@
   ユーザーがボタンクリックに合わせて表示内容を変えたい場合 -->
   <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
   <!-- <input type="button" id="triggerButton" value="ボタン" onclick="buttonObj();"> -->
-
 
 
   <script src="practice.js"></script>
