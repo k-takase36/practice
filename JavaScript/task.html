@@ -17,23 +17,23 @@
 
   <!-- ①Aのプルダウン -->
   <!-- select要素でプルダウンメニューを配置、option要素で選択肢を配置 -->
-  <select name="categoryA" id="categoryA" style="border-color: aqua;">  <!-- Aの要素（select）、属性（name）、属性値（"categoryA"）、属性（id）、属性値（"categoryA"）-->
-    <option value="0">選択してください</option>  <!-- Aの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
-    <option value="1">あいう</option> <!-- Aの子要素（option）、属性（value）、属性値（"0"、テキスト（あいう）-->
-    <option value="2">かきく</option> <!-- Aの子要素（option）、属性（value）、属性値（"1"、テキスト（かきく）-->
-    <option value="3">さしす</option> <!-- Aの子要素（option）、属性（value）、属性値（"2"、テキスト（さしす）-->
-  </select>
+  <!-- <select name="categoryA" id="categoryA" style="border-color: aqua;">  Aの要素（select）、属性（name）、属性値（"categoryA"）、属性（id）、属性値（"categoryA"） -->
+  <!--  <option value="0">選択してください</option>  --> <!-- Aの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
+  <!--  <option value="1">あいう</option> --> <!-- Aの子要素（option）、属性（value）、属性値（"0"、テキスト（あいう）-->
+  <!--  <option value="2">かきく</option> --> <!-- Aの子要素（option）、属性（value）、属性値（"1"、テキスト（かきく）-->
+  <!--  <option value="3">さしす</option> --> <!-- Aの子要素（option）、属性（value）、属性値（"2"、テキスト（さしす）-->
+  <!-- </select> -->
 
   <!-- ②Bのプルダウン -->
-  <select name="categoryB" id="categoryB">  <!-- Bの要素（select）、属性（name）、属性値（"categoryB"）、属性（id）、属性値（"categoryB"）-->
-    <option value="4">選択してください</option>  <!-- Bの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
-    <option value="5">たちつ</option> <!-- Bの子要素（option）、属性（value）、属性値（"3"）、テキスト（たちつ）-->
-    <option value="6">なにぬ</option> <!-- Bの子要素（option）、属性（value）、属性値（"4"）、テキスト（なにぬ）-->
-    <option value="7">はひふ</option> <!-- Bの子要素（option）、属性（value）、属性値（"5"）、テキスト（はひふ）-->
-  </select><br>
+  <!-- <select name="categoryB" id="categoryB">  --> <!-- Bの要素（select）、属性（name）、属性値（"categoryB"）、属性（id）、属性値（"categoryB"）-->
+  <!--   <option value="4">選択してください</option>  --> <!-- Bの子要素（option）、属性（value）、属性値（""）、テキスト（選択してください）-->
+  <!--   <option value="5">たちつ</option> --> <!-- Bの子要素（option）、属性（value）、属性値（"3"）、テキスト（たちつ）-->
+  <!--  <option value="6">なにぬ</option> --> <!-- Bの子要素（option）、属性（value）、属性値（"4"）、テキスト（なにぬ）-->
+  <!--   <option value="7">はひふ</option> --> <!-- Bの子要素（option）、属性（value）、属性値（"5"）、テキスト（はひふ）-->
+  <!-- </select><br> -->
   
   <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
-  <input type="button" value="ボタン" onclick="createPullDown();"> 
+  <input type="button" value="ボタン" onclick="task2PullDown();"> 
   
   <!-- 課題2：ボタンクリックしたら、「div消えて〜」が削除されて→「div追加」が表示される -->
   <hr>
@@ -42,11 +42,28 @@
     <div>消えて〜〜0</div> 
     <div>消えて〜〜1</div> 
     <div>消えて〜〜2</div> 
-    <div>消えて〜〜3</div> 
-    <div>消えて〜〜4</div> 
-    <div>消えて〜〜5</div> 
     <!-- <div>追加〜〜</div> -->
   </div>
+
+  
+  <hr>
+  <div>課題3</div>
+  <!-- ①Aのプルダウン -->
+  <!-- select要素でプルダウンメニューを配置、option要素で選択肢を配置 -->
+  <select id="catA">
+    <option value="1">選択してください</option>
+    <option value="2">あいう</option>
+    <option value="3">かきく</option> 
+  </select>
+
+  <!-- ②Bのプルダウン -->
+  <select id="catB"> 
+    <option value="4">選択してください</option> 
+    <option value="5">さしす</option>
+    <option value="6">たちつ</option>
+  </select><br>
+
+  <input type="button" value="ボタン" onclick="createPullDown();">
   
   <script src="task.js"></script>
 </body>

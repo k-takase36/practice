@@ -3,7 +3,7 @@
 // 課題：A .プルダウン（あいう） B. プルダウン（かきく）
 // ボタンクリックしたら、Aの項目がBへ追加される
 
-function createPullDown() { // funstionで関数宣言し、createSelectBox関数名を定義
+function task2PullDown() { // funstionで関数宣言し、createSelectBox関数名を定義
   // let takaElm = document.getElementById('taka');
   // // let sekoElm = document.getElementById('seko');
   // takaElm.value =  takaElm.value + '様';
@@ -77,6 +77,7 @@ function createPullDown() { // funstionで関数宣言し、createSelectBox関�
     // parChildElms[i].remove();
     parChildElms[0].remove();
   }
+  // alert(childLen);
   // parChildElms[0].remove();
   // parChildElms[0].remove();
   // parChildElms[0].remove();
@@ -90,4 +91,38 @@ function createPullDown() { // funstionで関数宣言し、createSelectBox関�
     // ⑤親要素に、④の要素を追加
     parElm.appendChild(addElm);
 
+};
+
+// 課題3 プルダウンAの「あいう、かきく」を、プルダウンB「さしす、たちつ」の下部へ追加
+
+function createPullDown() {
+
+  // 書き方①（for文あり）
+  let catAElm = document.getElementById('catA'); 
+  let catChildAElms = catAElm.children;
+  let catChildALen = catAElm.children.length;
+  let catBElm = document.getElementById('catB');
+
+  for (let i=1; i<catChildALen; i=i+1) {
+    let addElm = document.createElement('option');
+    addElm.text = catChildAElms[i].text;
+    catBElm.appendChild(addElm);
+  }
+
+
+  // for (let i = 0; i < catChildALen; i++) {
+  //   catBElm.appendChild(catChildAElms[1]);
+  // }
+
+  // 書き方②(for文なし)
+  // catBElm.appendChild(catChildAElms[1]);
+  // catBElm.appendChild(catChildAElms[1]);
+
+    // 書き方③（for文あり、親要素のみ）
+    // let catAElm = document.getElementById('catA'); 
+    // let catBElm = document.getElementById('catB');
+
+    // for (let i = 0; i < catAElm.length; i++) {
+    //   catBElm.appendChild(catAElm[1]);
+    // }
 };
