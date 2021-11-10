@@ -101,7 +101,7 @@
 
   <!-- 練習1：要素を取得、変更 -->
   <!-- 要素を取得 -->
-  <div>練習1</div>
+  <!-- <div>練習1</div>
   <div id="placeBox">
     <h1>場所</h1>
     <p>海</p>
@@ -110,10 +110,10 @@
 
   <input type="text" id="taka" value="aaa" /><br/>
   <input type="text" id="seko" value="" style="border: 2px solid;" />
-  <input type="button" id="placeButton" value="ボタン" onclick="placeContent();">
+  <input type="button" id="placeButton" value="ボタン" onclick="placeContent();"> -->
 
   <!-- 練習2：要素を取得、変更 -->
-  <hr>
+  <!-- <hr>
   <div>練習2</div>
   <div id="foodBox">
     <h2>食べ物</h2>
@@ -121,10 +121,10 @@
     <div>魚</div>
     <div>野菜</div>
   </div>
-  <input type="button" id="foodButton" value="ボタン" onclick="foodContent();">
+  <input type="button" id="foodButton" value="ボタン" onclick="foodContent();"> -->
 
   <!-- 練習3：要素の取得、変更 -->
-  <hr>
+  <!-- <hr>
   <div>練習3</div>
   <div class="vehicleBox">
     <h3>乗り物</h3>
@@ -135,10 +135,10 @@
     </ul>
   </div>
   <input type="text" id="vehicleText" value="">
-  <input type="button" id="vehicleButton" value="ボタン" onclick="vehicleContent();">
+  <input type="button" id="vehicleButton" value="ボタン" onclick="vehicleContent();"> -->
 
   <!-- 練習4：要素の取得、変更 -->
-  <hr>
+  <!-- <hr>
   <div>練習4</div>
   <select id="likeVeg">
     <option value="1">娘の好きな料理A</option>
@@ -154,19 +154,18 @@
     <option value="8">6.とうふハンバーグ</option>
   </select><br>
 
-  <input type="button" id="triggerButton" value="ボタン" onclick="childPullDown();"
+  <input type="button" id="triggerButton" value="ボタン" onclick="childPullDown();" -->
 
 
   <!-- 課題2：ボタンクリックしたら、「div消えて〜」が削除されて→「div追加」が表示される -->
   <!-- 要素の削除、作成、追加 -->
-  <hr>
+  <!-- <hr>
   <div>課題2</div>
   <div id="parent" style="background-color: beige"> 
     <div>消えて〜〜</div> 
-    <!-- <div>追加〜〜</div> -->
   </div>
 
-  <input type="button" value="ボタン" onclick="task2Button();">
+  <input type="button" value="ボタン" onclick="task2Button();"> -->
 
   <!-- name属性で要素を取得 -->
   <!-- <input type="text" name="textName" value="テキスト"> -->
@@ -180,6 +179,39 @@
   <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
   <!-- <input type="button" id="triggerButton" value="ボタン" onclick="buttonObj();"> -->
 
+  <!-- 課題3_復習 プルダウンAの「あいう、かきく」を、プルダウンB「さしす、たちつ」の下部へ追加 -->
+  <!-- <hr>
+  <div>課題3_復習</div>
+  <select id="cookA">
+    <option value="1">料理A</option>
+    <option value="2">たまごやき</option>
+    <option value="3">オムライス</option>
+    <option value="4">ハンバーグ</option>
+  </select>
+  
+  <select id="cookB">
+    <option value="5">料理B</option>
+    <option value="6">からあげ</option>
+    <option value="7">しゃけごはん</option>
+    <option value="8">とんじる</option>
+  </select><br> -->
+  
+  <hr>
+  <div>課題3_アレンジ</div>
+  <select id="cookA">
+    <option value="1">料理A</option>
+    <option value="2">たまごやき</option>
+    <option value="3">オムライス</option>
+    <option value="4">ハンバーグ</option>
+  </select>
+  
+  <select id="cookB">
+    <option value="5">料理B</option>
+    <option value="6">からあげ</option>
+    <option value="7">しゃけごはん</option>
+    <option value="8">とんじる</option>
+  </select><br>
+  <input type="button" value="ボタン" onclick="cookArrange();">
 
   <script src="practice.js"></script>
 </body>
