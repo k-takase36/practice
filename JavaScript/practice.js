@@ -445,19 +445,28 @@
 // ◆手順
 // ①A親要素を取得
 // ②A子要素を取得
-// ③A子要素の数を取得
-// ④Bの親要素を取得
-// ⑤Bの親要素の末尾に、②子要素のインデックス番号を指定して追加
-// （for文を使用）
+// ③B親要素を取得
+// ④B子要素を取得
+// ⑤B親要素の先頭に、②子要素を昇順で追加(for文)
+//  【for文の中】
+//   ⑥for文の繰り返し回数を指定
+//   ⑦追加するA子要素index「0」は追加しない（index「0」になったらfor文を処理を抜ける「if break使用」）
+//   ⑧B子要素に追加する要素を生成
+//   ⑨追加する要素⑧に、A子要素のtext、valueを設定（追加）
+//   ⑩B親要素のindex「0」の下にして（指定）、⑧子要素を追加
 
 function cookArrange() {
   let cookAElm = document.getElementById('cookA');
   let cookChildAElms = cookAElm.children;
-
+  // let cookChildALen = cookChildAElms.length;
+  // alert(cookChildALen);
   let cookBElm = document.getElementById('cookB');
   let cookChildBElms = cookBElm.children;
-  
-  for (let i=1; i<cookChildAElms.length; i++) {
+
+  for (let i=3; i<cookChildAElms.length; i--) {
+    if (i == 0) {
+      break;
+    }
     let addElm = document.createElement('option');
     addElm.text = cookChildAElms[i].text;
     addElm.value = cookChildAElms[i].value;
