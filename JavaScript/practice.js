@@ -440,7 +440,7 @@
 
 // };
 
-// 課題3_アレンジ プルダウンAの「あいう、かきく」を、プルダウンB「さしす、たちつ」の上部へ追加
+// 課題3_アレンジ プルダウンAの子要素を、プルダウンBの子要素の上部へ追加
 
 // ◆手順
 // ①A親要素を取得
@@ -455,35 +455,97 @@
 //   ⑨追加する要素⑧に、A子要素のtext、valueを設定（追加）
 //   ⑩B親要素のindex「0」の下にして（指定）、⑧子要素を追加
 
-function cookArrange() {
-  let cookAElm = document.getElementById('cookA');
-  let cookChildAElms = cookAElm.children;
-  // let cookChildALen = cookChildAElms.length;
-  // alert(cookChildALen);
-  let cookBElm = document.getElementById('cookB');
-  let cookChildBElms = cookBElm.children;
+// function cookArrange() {
+//   let cookAElm = document.getElementById('cookA');
+//   let cookChildAElms = cookAElm.children;
+//   // let cookChildALen = cookChildAElms.length;
+//   // alert(cookChildALen);
+//   let cookBElm = document.getElementById('cookB');
+//   let cookChildBElms = cookBElm.children;
 
-  for (let i=3; i<cookChildAElms.length; i--) {
-    if (i == 0) {
-      break;
-    }
-    let addElm = document.createElement('option');
-    addElm.text = cookChildAElms[i].text;
-    addElm.value = cookChildAElms[i].value;
-    cookBElm.insertBefore(addElm, cookChildBElms[1]);
-  }
+//   for (let i=3; i<cookChildAElms.length; i--) {
+//     if (i == 0) {
+//       break;
+//     }
+//     let addElm = document.createElement('option');
+//     addElm.text = cookChildAElms[i].text;
+//     addElm.value = cookChildAElms[i].value;
+//     cookBElm.insertBefore(addElm, cookChildBElms[1]);
+//   }
   
-  // 直書き(for文なし)
-  // let addElm = document.createElement('option');
-  // addElm.text = 'たまごやき';
-  // cookBElm.appendChild(addElm);
+//   // 直書き(for文なし)
+//   // let addElm = document.createElement('option');
+//   // addElm.text = 'たまごやき';
+//   // cookBElm.appendChild(addElm);
 
-  // let add2Elm = document.createElement('option');
-  // add2Elm.text = 'オムライス';
-  // cookBElm.appendChild(add2Elm);
+//   // let add2Elm = document.createElement('option');
+//   // add2Elm.text = 'オムライス';
+//   // cookBElm.appendChild(add2Elm);
 
-  // let add3Elm = document.createElement('option');
-  // add3Elm.text = 'ハンバーグ';
-  // cookBElm.appendChild(add3Elm);
+//   // let add3Elm = document.createElement('option');
+//   // add3Elm.text = 'ハンバーグ';
+//   // cookBElm.appendChild(add3Elm);
 
-};
+// };
+
+// 自習2_ 親プルダウンの子要素を選択後、選択した子要素のプルダウンが表示
+// 条件：子要素のプルダウンは初期状態は非表示、親プルダウンで選択された時に表示される仕様
+
+// 手順
+// ①親プルダウンの親要素を取得
+// ②親プルダウンの子要素を取得
+// ③子プルダウンの親要素を取得
+// ④親プルダウンの子要素を選択時、子プルダウンの親要素が表示
+
+  let matElm = document.getElementById('material');
+  matElm.addEventListener('change', () => {
+    let matChildElms = matElm.children;
+
+    
+  });
+
+
+// サンプルコード 
+// var array = new Array();
+// array[''] = new Array({cd:"0", label:"選択してください"});
+// array["tokyo"] = new Array(
+//   {cd:"1", label:"世田谷区"},
+//   {cd:"2", label:"練馬区"},
+//   {cd:"3", label:"太田区"},
+//   {cd:"4", label:"足立区"},
+//   {cd:"5", label:"江戸川区"}
+// );
+// array["osaka"] = [
+//   {cd:"1", label:"大阪市"},
+//   {cd:"2", label:"堺市"},
+//   {cd:"3", label:"東大阪市"},
+//   {cd:"4", label:"枚方市"},
+//   {cd:"5", label:"豊中市"}
+// ];
+// array["kyoto"] = [
+//   {cd:"1", label:"京都市"},
+//   {cd:"2", label:"宇治市"},
+//   {cd:"3", label:"亀岡市"},
+//   {cd:"4", label:"舞鶴市"},
+//   {cd:"5", label:"城陽市"}
+// ];
+// array["aichi"] = [
+//   {cd:"1", label:"名古屋市"},
+//   {cd:"2", label:"豊田市"},
+//   {cd:"3", label:"一宮市"},
+//   {cd:"4", label:"豊橋市"},
+//   {cd:"5", label:"岡崎市"}
+// ];
+
+// document.getElementById('prefecture').onchange = function(){
+//   var city = document.getElementById('city');
+//   city.options.length = 0
+//   var changedPref = prefecture.value;
+//   for (let i = 0; i < array[changedPref].length; i++) {
+//     var op = document.createElement('option');
+//     var value = array[changedPref][i]
+//     op.value = value.cd;
+//     op.text = value.label;
+//     city.appendChild(op);
+//   }
+// }
