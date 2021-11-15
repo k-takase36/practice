@@ -497,10 +497,27 @@
 // ③子プルダウンの親要素を取得
 // ④親プルダウンの子要素を選択時、子プルダウンの親要素が表示
 
+function materialChange() {
   let matElm = document.getElementById('material');
-  matElm.addEventListener('change', () => {
-    let matChildElms = matElm.children;
-  });
+  let matChildElms = matElm.children;
+  
+  let meatElm = document.getElementById('meat');
+  let meatChildElms = meatElm.children;
+  meatElm.display = 'none'; 
+
+  let fishElm = document.getElementById('fish');
+  let fishChildElms = fishElm.children;
+
+  let vegeElm = document.getElementById('vege');
+  let vegeChildElms = vegeElm.children;
+  
+};
+
+  // addEventListenerの方法
+  // let matElm = document.getElementById('material');
+  // matElm.addEventListener('change', () => {
+  //   let matChildElms = matElm.children;
+  // });
 
 
 // サンプルコード 
