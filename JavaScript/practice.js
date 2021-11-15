@@ -500,8 +500,6 @@
   let matElm = document.getElementById('material');
   matElm.addEventListener('change', () => {
     let matChildElms = matElm.children;
-
-    
   });
 
 
