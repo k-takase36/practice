@@ -497,19 +497,27 @@
 // ③子プルダウンの親要素を取得
 // ④親プルダウンの子要素を選択時、子プルダウンの親要素が表示
 
+let meatElm = document.getElementById('meat');
+let meatChildElms = meatElm.children;
+meatElm.style.display = 'none';
+
+let fishElm = document.getElementById('fish');
+let fishChildElms = fishElm.children;
+fishElm.style.display = 'none';
+
+let vegeElm = document.getElementById('vegetable');
+let vegeChildElms = vegeElm.children;
+vegeElm.style.display = 'none';
+
 function materialChange() {
   let matElm = document.getElementById('material');
   let matChildElms = matElm.children;
   
-  let meatElm = document.getElementById('meat');
-  let meatChildElms = meatElm.children;
-  meatElm.display = 'none'; 
-
-  let fishElm = document.getElementById('fish');
-  let fishChildElms = fishElm.children;
-
-  let vegeElm = document.getElementById('vege');
-  let vegeChildElms = vegeElm.children;
+  if(meat.style.display == 'block') {
+    meatElm.style.display = 'none'; 
+  } else {
+    meatElm.style.display = 'block';
+  }
   
 };
 
