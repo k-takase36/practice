@@ -215,11 +215,11 @@
 
   <hr>
   <div>自習2</div>
-  <select id="material" onchange="materialChange();">
+  <select>
     <option value="1">1つえらんで</option>
-    <option value="2">にく</option>
-    <option value="3">さかな</option>
-    <option value="4">やさい</option>
+    <option value="2" id="materialMeat" onchange="materialMeatChange();">にく</option>
+    <option value="3" id="materialFish" onchange="materialFishChange();">さかな</option>
+    <option value="4" id="materialVege" onchange="materialVegeChange();">やさい</option>
   </select><br>
   
   <select id="meat">
