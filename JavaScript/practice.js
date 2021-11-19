@@ -498,55 +498,40 @@
 // ④親プルダウンの子要素を選択時、子プルダウンの親要素が表示
 
 
-
-
 let meatElm = document.getElementById('meat');
 let meatChildElms = meatElm.children;
 meatElm.style.display = 'none';
-
-function materialMeatChange() {
-  let materialMeatElm = document.getElementById('materialMeat');
-  let materialMeatChildElms = materialMeatElm.children;
-  
-  if(meat.style.display == 'block') {
-    meatElm.style.display = 'none'; 
-  } else {
-    meatElm.style.display = 'block';
-  }
-  
-};
-
 
 let fishElm = document.getElementById('fish');
 let fishChildElms = fishElm.children;
 fishElm.style.display = 'none';
 
-function materialFishChange() {
-  let materialFishElm = document.getElementById('materialFish');
-  let materialFishChildElms = materialFishElm.children;
-  
-  if(fish.style.display == 'block') {
-    materialFishElm.style.display = 'none'; 
-  } else {
-    materialFishElm.style.display = 'block';
-  }
-  
-};
-
 let vegeElm = document.getElementById('vegetable');
 let vegeChildElms = vegeElm.children;
 vegeElm.style.display = 'none';
 
-function materialVegeChange() {
-  let materialVegeElm = document.getElementById('materialVege');
-  let materialVegeChildElms = materialVegeElm.children;
+function materialChange() {
+  let mateElm = document.getElementById('material');
+  let mateChildElms = mateElm.children;
   
-  if(vegetable.style.display == 'block') {
-    materialVegeElm.style.display = 'none'; 
+  if(meat.style.display == 'block') {
+    meat.style.display = 'none'; 
   } else {
-    materialVegeElm.style.display = 'block';
+    meat.style.display = 'block';
   }
   
+  if(fish.style.display == 'block') {
+    fish.style.display = 'none'; 
+  } else {
+    fish.style.display = 'block';
+  }
+
+  if(vegetable.style.display == 'block') {
+    vegetable.style.display = 'none'; 
+  } else {
+    vegetable.style.display = 'block';
+  }
+
 };
 
 // addEventListenerの方法
