@@ -499,38 +499,54 @@
 
 
 let meatElm = document.getElementById('meat');
-let meatChildElms = meatElm.children;
+// let meatChildElms = meatElm.children;
 meatElm.style.display = 'none';
 
 let fishElm = document.getElementById('fish');
-let fishChildElms = fishElm.children;
+// let fishChildElms = fishElm.children;
 fishElm.style.display = 'none';
 
 let vegeElm = document.getElementById('vegetable');
-let vegeChildElms = vegeElm.children;
+// let vegeChildElms = vegeElm.children;
 vegeElm.style.display = 'none';
 
 function materialChange() {
   let mateElm = document.getElementById('material');
   let mateChildElms = mateElm.children;
+  let mateMeatVal = mateChildElms[1].getAttribute('value');
+  let mateFishVal = mateChildElms[2].getAttribute('value');
+  let mateVegeVal = mateChildElms[3].getAttribute('value');
   
-  if(meat.style.display == 'block') {
-    meat.style.display = 'none'; 
-  } else {
-    meat.style.display = 'block';
-  }
+  if (mateMeatVal == '2' || mateFishVal !== '3' || mateVegeVal !== '4') {
+    meatElm.style.display = 'block';
+    fishElm.style.display = 'none';
+    vegeElm.style.display = 'none';
+  } 
   
-  if(fish.style.display == 'block') {
-    fish.style.display = 'none'; 
-  } else {
-    fish.style.display = 'block';
-  }
+  if (mateMeatVal !== '2' && mateFishVal == '3' && mateVegeVal !== '4') {
+    meatElm.style.display = 'none';
+    fishElm.style.display = 'block';
+    vegeElm.style.display = 'none';
+  } 
+  
+  if (mateMeatVal !== '2' && mateFishVal !== '3' && mateVegeVal == '4') {
+    meatElm.style.display = 'none';
+    fishElm.style.display = 'none';
+    vegeElm.style.display = 'block';
+  } 
 
-  if(vegetable.style.display == 'block') {
-    vegetable.style.display = 'none'; 
-  } else {
-    vegetable.style.display = 'block';
-  }
+  
+  // if(fish.style.display == 'block') {
+  //   fish.style.display = 'none'; 
+  // } else {
+  //   fish.style.display = 'block';
+  // }
+
+  // if(vegetable.style.display == 'block') {
+  //   vegetable.style.display = 'none'; 
+  // } else {
+  //   vegetable.style.display = 'block';
+  // }
 
 };
 
