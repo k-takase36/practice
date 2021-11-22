@@ -128,30 +128,26 @@ function createPullDown() {
   
 };
 
+// ①要素を取得
+// ②要素のスタイル属性を指定して、初期状態を非表示にする
+// ③イベント発生後、要素のスタイルを表示にする
+
+
 let aElm = document.getElementById('a');
-aElm.style.display = 'none';
+aElm.style.display = 'none'
 
 let kaElm = document.getElementById('ka');
-kaElm.style.display = 'none';
+kaElm.style.display = 'none'
 
-function createRadio1() {
-  // let aElm = document.getElementById('a')
-  if(aElm.style.display=="block"){
-		// noneで非表示
-		aElm.style.display ="none";
-	} else{
-		// blockで表示
-		aElm.style.display ="block";
-	}
-};
+function createRadio() {
+  let aRadioElm = document.getElementById('aRadio');
+  let kaRadioElm = document.getElementById('kaRadio');
 
-function createRadio2() {
-  // let kaElm = document.getElementById('ka')
-  if(kaElm.style.display=="block"){
-    // noneで非表示
-    kaElm.style.display ="none";
-  } else{
-    // blockで表示
-    kaElm.style.display ="block";
+  if (aRadioElm.checked){
+    aElm.style.display = 'block';
+    kaElm.style.display = 'none'
+  } else if(kaRadioElm.checked) {
+    kaElm.style.display = 'block';
+    aElm.style.display = 'none'
   }
 };
