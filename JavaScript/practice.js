@@ -517,23 +517,23 @@ function materialChange() {
   let mateFishVal = mateChildElms[2].getAttribute('value');
   let mateVegeVal = mateChildElms[3].getAttribute('value');
   
-  if (mateMeatVal == '2' || mateFishVal !== '3' || mateVegeVal !== '4') {
-    meatElm.style.display = 'block';
-    fishElm.style.display = 'none';
-    vegeElm.style.display = 'none';
-  } 
+  // if (mateMeatVal == '2' || mateFishVal !== '3' || mateVegeVal !== '4') {
+  //   meatElm.style.display = 'block';
+  //   fishElm.style.display = 'none';
+  //   vegeElm.style.display = 'none';
+  // } 
   
-  if (mateMeatVal !== '2' && mateFishVal == '3' && mateVegeVal !== '4') {
-    meatElm.style.display = 'none';
-    fishElm.style.display = 'block';
-    vegeElm.style.display = 'none';
-  } 
+  // if (mateMeatVal !== '2' && mateFishVal == '3' && mateVegeVal !== '4') {
+  //   meatElm.style.display = 'none';
+  //   fishElm.style.display = 'block';
+  //   vegeElm.style.display = 'none';
+  // } 
   
-  if (mateMeatVal !== '2' && mateFishVal !== '3' && mateVegeVal == '4') {
-    meatElm.style.display = 'none';
-    fishElm.style.display = 'none';
-    vegeElm.style.display = 'block';
-  } 
+  // if (mateMeatVal !== '2' && mateFishVal !== '3' && mateVegeVal == '4') {
+  //   meatElm.style.display = 'none';
+  //   fishElm.style.display = 'none';
+  //   vegeElm.style.display = 'block';
+  // } 
 
   
   // if(fish.style.display == 'block') {

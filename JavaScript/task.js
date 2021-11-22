@@ -128,3 +128,30 @@ function createPullDown() {
   
 };
 
+let aElm = document.getElementById('a');
+aElm.style.display = 'none';
+
+let kaElm = document.getElementById('ka');
+kaElm.style.display = 'none';
+
+function createRadio1() {
+  // let aElm = document.getElementById('a')
+  if(aElm.style.display=="block"){
+		// noneで非表示
+		aElm.style.display ="none";
+	} else{
+		// blockで表示
+		aElm.style.display ="block";
+	}
+};
+
+function createRadio2() {
+  // let kaElm = document.getElementById('ka')
+  if(kaElm.style.display=="block"){
+    // noneで非表示
+    kaElm.style.display ="none";
+  } else{
+    // blockで表示
+    kaElm.style.display ="block";
+  }
+};
