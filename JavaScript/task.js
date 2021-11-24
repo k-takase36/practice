@@ -128,26 +128,59 @@ function createPullDown() {
   
 };
 
-// ①要素を取得
-// ②要素のスタイル属性を指定して、初期状態を非表示にする
-// ③イベント発生後、要素のスタイルを表示にする
+// 課題4_プルダウンを選択すると、テキストが表示する
+// 方法_1（表示、非表示の切替）
+// ①テキスト要素を取得
+// ②テキスト要素のスタイル属性を指定して、初期状態を非表示にする
+// ③イベント（onchange）関数内で、プルダウン要素の取得
+// ④if文でプルダウン要素が選択された時、テキスト要素を表示、非表示に切替
 
+// // 方法_1（表示、非表示の切替）
+// //①、②
+// let aElm = document.getElementById('a');
+// aElm.style.display = 'none';
 
-let aElm = document.getElementById('a');
-aElm.style.display = 'none'
+// let kaElm = document.getElementById('ka');
+// kaElm.style.display = 'none';
 
-let kaElm = document.getElementById('ka');
-kaElm.style.display = 'none'
+// // ③、④
+// function createRadio() {
+//   let aRadioElm = document.getElementById('aRadio');
+//   let kaRadioElm = document.getElementById('kaRadio');
+  
+//   if (aRadioElm.checked){
+//     aElm.style.display = 'block';
+//     kaElm.style.display = 'none';
+//   } else if(kaRadioElm.checked) {
+//     kaElm.style.display = 'block';
+//     aElm.style.display = 'none';
+//   }
+  
+  // 方法_2（textContent値の書き換え）
+  // ①テキスト要素の取得
+  // ②テキスト要素のtextを指定して、textの初期状態を空にする
+  // ③イベント（onchange）関数内で、プルダウン要素の取得
+  // ④if文でプルダウン要素が選択された時、テキスト要素のtextContentを表示、非表示に切替
 
+  //①、②
+  let aElm = document.getElementById('a');
+  aElm.textContent = '';
+  
+  let kaElm = document.getElementById('ka');
+  kaElm.textContent = '';
+
+  // ③、④
 function createRadio() {
+
   let aRadioElm = document.getElementById('aRadio');
   let kaRadioElm = document.getElementById('kaRadio');
-
+  
   if (aRadioElm.checked){
-    aElm.style.display = 'block';
-    kaElm.style.display = 'none'
+    aElm.textContent = 'あいうえお';
+    kaElm.textContent = '';
   } else if(kaRadioElm.checked) {
-    kaElm.style.display = 'block';
-    aElm.style.display = 'none'
+    kaElm.textContent = 'かきくけこ';
+    aElm.textContent = '';
   }
-};
+
+}; 

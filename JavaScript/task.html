@@ -9,9 +9,9 @@
 </head>
 <body>
 
-  <input type="text" id="taka" value="aaa" /><br/>
+  <!-- <input type="text" id="taka" value="aaa" /><br/>
   <input type="text" id="seko" value="" style="border: 2px solid;" />
-  <hr />
+  <hr /> -->
 
   <!-- 課題：ボタンクリックしたら、プルダウンAの項目がプルダウンBへ追加される -->
 
@@ -32,18 +32,17 @@
   <!--   <option value="7">はひふ</option> --> <!-- Bの子要素（option）、属性（value）、属性値（"5"）、テキスト（はひふ）-->
   <!-- </select><br> -->
   
-  <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
-  <input type="button" value="ボタン" onclick="task2PullDown();"> 
   
-  <!-- 課題2：ボタンクリックしたら、「div消えて〜」が削除されて→「div追加」が表示される -->
+  <!-- 課題2：ボタンクリックしたら、「div消えて〜」が削除されて→「div追加〜」が表示される -->
   <hr>
   <div>課題2</div>
   <div id="parent" style="background-color: beige">
     <div>消えて〜〜0</div> 
     <div>消えて〜〜1</div> 
     <div>消えて〜〜2</div> 
-    <!-- <div>追加〜〜</div> -->
   </div>
+  <!-- 要素（input）、属性（type）、属性値（"button"）、属性（value）属性値（"ボタン"）、onclick（イベント）、JavaScriptのメソッド（"createPullDpwn();"）-->
+  <input type="button" value="ボタン" onclick="task2PullDown();"> 
   
   <hr>
   <div>課題3</div>
@@ -64,15 +63,16 @@
 
   <input type="button" value="ボタン" onclick="createPullDown();">
 
+
   <hr>
   <div>課題4</div>
 
-  <input type="radio" id="aRadio" name="btnChange" onchange="createRadio()">あ
-  <input type="radio" id="kaRadio" name="btnChange" onchange="createRadio()">か
+  <label><input type="radio" id="aRadio" name="btnChange" onchange="createRadio()">あ</label>
+  <label><input type="radio" id="kaRadio" name="btnChange" onchange="createRadio()">か</label>
 
-  <div id="a">あいうえお</div>
-  <div id="ka">かきくけこ</div>
-  
+  <div id="a" value="aVal">あいうえお</div>
+  <div id="ka" value="kaVal">かきくけこ</div>
+
   <script src="task.js"></script>
 </body>
 </html>
