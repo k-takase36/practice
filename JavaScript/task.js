@@ -135,7 +135,7 @@ function createPullDown() {
 // ③イベント（onchange）関数内で、プルダウン要素の取得
 // ④if文でプルダウン要素が選択された時、テキスト要素を表示、非表示に切替
 
-// // 方法_1（表示、非表示の切替）
+// // 方法_1（表示、非表示の切替：display）
 // //①、②
 // let aElm = document.getElementById('a');
 // aElm.style.display = 'none';
@@ -144,7 +144,7 @@ function createPullDown() {
 // kaElm.style.display = 'none';
 
 // // ③、④
-// function createRadio() {
+// function changeRadio() {
 //   let aRadioElm = document.getElementById('aRadio');
 //   let kaRadioElm = document.getElementById('kaRadio');
   
@@ -155,32 +155,43 @@ function createPullDown() {
 //     kaElm.style.display = 'block';
 //     aElm.style.display = 'none';
 //   }
+// };
   
-  // 方法_2（textContent値の書き換え）
-  // ①テキスト要素の取得
-  // ②テキスト要素のtextを指定して、textの初期状態を空にする
-  // ③イベント（onchange）関数内で、プルダウン要素の取得
-  // ④if文でプルダウン要素が選択された時、テキスト要素のtextContentを表示、非表示に切替
+//   // 方法_2（表示、非表示の切替：textContent）
+//   // ①テキスト要素の取得
+//   // ②テキスト要素のtextを指定して、textの初期状態を空にする
+//   // ③イベント（onchange）関数内で、プルダウン要素の取得
+//   // ④if文でプルダウン要素が選択された時、テキスト要素のtextContentを表示、非表示に切替
 
-  //①、②
-  let aElm = document.getElementById('a');
-  aElm.textContent = '';
+//   //①、②
+//   let aElm = document.getElementById('a');
+//   aElm.textContent = '';
   
-  let kaElm = document.getElementById('ka');
-  kaElm.textContent = '';
+//   let kaElm = document.getElementById('ka');
+//   kaElm.textContent = '';
 
-  // ③、④
-function createRadio() {
+//   // ③、④
+// function changeRadio() {
 
-  let aRadioElm = document.getElementById('aRadio');
-  let kaRadioElm = document.getElementById('kaRadio');
-  
-  if (aRadioElm.checked){
-    aElm.textContent = 'あいうえお';
-    kaElm.textContent = '';
-  } else if(kaRadioElm.checked) {
-    kaElm.textContent = 'かきくけこ';
-    aElm.textContent = '';
-  }
+//   let aRadioElm = document.getElementById('aRadio');
+//   let kaRadioElm = document.getElementById('kaRadio');
 
-}; 
+//   if (aRadioElm.checked){
+  //     aElm.textContent = 'あいうえお';
+  //     kaElm.textContent = '';
+  //   } else if(kaRadioElm.checked) {
+    //     kaElm.textContent = 'かきくけこ';
+    //     aElm.textContent = '';
+    //   }
+    
+// };
+    
+// 方法_3（value値の書き換え）
+// ①html側のthis.valueを関数の引数として渡す ?
+// ②イベント（onchange）関数内で、テキスト要素の取得
+// ④テキスト要素のテキストに、引数val（取得したvalue値）を代入して表示
+    
+function changeRadio(val) {
+  let txtElm = document.getElementById('txt');
+  txtElm.textContent = val;
+};

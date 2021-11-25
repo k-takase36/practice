@@ -67,11 +67,37 @@
   <hr>
   <div>課題4</div>
 
-  <label><input type="radio" id="aRadio" name="btnChange" onchange="createRadio()">あ</label>
-  <label><input type="radio" id="kaRadio" name="btnChange" onchange="createRadio()">か</label>
+  <!-- 方法_1（表示、非表示の切替：display） -->
+  <!-- <label>
+    <input type="radio" id="aRadio" name="btnChange" onchange="changeRadio()">あ
+  </label>
+  <label>
+    <input type="radio" id="kaRadio" name="btnChange" onchange="changeRadio()">か
+  </label>
 
-  <div id="a" value="aVal">あいうえお</div>
-  <div id="ka" value="kaVal">かきくけこ</div>
+  <div id="a">あいうえお</div>
+  <div id="ka">かきくけこ</div> -->
+  
+  <!-- 方法_2（表示、非表示の切替：textContent） -->
+  <!-- <label>
+    <input type="radio" id="aRadio" name="btnChange" onchange="changeRadio()">あ
+  </label>
+  <label>
+    <input type="radio" id="kaRadio" name="btnChange" onchange="changeRadio()">か
+  </label>
+
+  <div id="a">あいうえお</div>
+  <div id="ka">かきくけこ</div> -->
+
+  <!-- 方法_3（value値の書き換え） -->
+  <label>
+    <input type="radio" name="btnChange" value="あいうえお" onchange="changeRadio(this.value)">あ
+  </label>
+  <label>
+    <input type="radio" name="btnChange" value="かきくけこ" onchange="changeRadio(this.value)">か
+  </label>
+
+  <div id="txt"></div>
 
   <script src="task.js"></script>
 </body>
