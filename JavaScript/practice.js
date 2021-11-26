@@ -493,9 +493,8 @@
 
 // 手順
 // ①親プルダウンの親要素を取得
-// ②親プルダウンの子要素を取得
-// ③子プルダウンの親要素を取得
-// ④親プルダウンの子要素を選択時、子プルダウンの親要素が表示
+// ②親プルダウンのvalue属性を代入
+// ③if文を使用して、親プルダウンの指定したvalue属性を選択したき、表示、非表示
 
 
 let meatElm = document.getElementById('meat');
@@ -512,41 +511,25 @@ vegeElm.style.display = 'none';
 
 function materialChange() {
   let mateElm = document.getElementById('material');
-  let mateChildElms = mateElm.children;
-  let mateMeatVal = mateChildElms[1].getAttribute('value');
-  let mateFishVal = mateChildElms[2].getAttribute('value');
-  let mateVegeVal = mateChildElms[3].getAttribute('value');
+  let mateVal = mateElm.value; 
   
-  // if (mateMeatVal == '2' || mateFishVal !== '3' || mateVegeVal !== '4') {
-  //   meatElm.style.display = 'block';
-  //   fishElm.style.display = 'none';
-  //   vegeElm.style.display = 'none';
-  // } 
+  if (mateVal == '2') {
+    meatElm.style.display = 'block';
+    fishElm.style.display = 'none';
+    vegeElm.style.display = 'none';
+  } 
   
-  // if (mateMeatVal !== '2' && mateFishVal == '3' && mateVegeVal !== '4') {
-  //   meatElm.style.display = 'none';
-  //   fishElm.style.display = 'block';
-  //   vegeElm.style.display = 'none';
-  // } 
+  if (mateVal == '3') {
+    meatElm.style.display = 'none';
+    fishElm.style.display = 'block';
+    vegeElm.style.display = 'none';
+  } 
   
-  // if (mateMeatVal !== '2' && mateFishVal !== '3' && mateVegeVal == '4') {
-  //   meatElm.style.display = 'none';
-  //   fishElm.style.display = 'none';
-  //   vegeElm.style.display = 'block';
-  // } 
-
-  
-  // if(fish.style.display == 'block') {
-  //   fish.style.display = 'none'; 
-  // } else {
-  //   fish.style.display = 'block';
-  // }
-
-  // if(vegetable.style.display == 'block') {
-  //   vegetable.style.display = 'none'; 
-  // } else {
-  //   vegetable.style.display = 'block';
-  // }
+  if (mateVal == '4') {
+    meatElm.style.display = 'none';
+    fishElm.style.display = 'none';
+    vegeElm.style.display = 'block';
+  } 
 
 };
 
