@@ -517,19 +517,19 @@ function materialChange() {
     meatElm.style.display = 'block';
     fishElm.style.display = 'none';
     vegeElm.style.display = 'none';
-  } 
-  
-  if (mateVal == '3') {
+  } else if (mateVal == '3') {
     meatElm.style.display = 'none';
     fishElm.style.display = 'block';
     vegeElm.style.display = 'none';
-  } 
-  
-  if (mateVal == '4') {
+  } else if (mateVal == '4') {
     meatElm.style.display = 'none';
     fishElm.style.display = 'none';
     vegeElm.style.display = 'block';
-  } 
+  } else {
+    meatElm.style.display = 'none';
+    fishElm.style.display = 'none';
+    vegeElm.style.display = 'none';
+  }
 
 };
 
@@ -538,49 +538,3 @@ function materialChange() {
   // matElm.addEventListener('change', () => {
   //   let matChildElms = matElm.children;
   // });
-
-
-// サンプルコード 
-// var array = new Array();
-// array[''] = new Array({cd:"0", label:"選択してください"});
-// array["tokyo"] = new Array(
-//   {cd:"1", label:"世田谷区"},
-//   {cd:"2", label:"練馬区"},
-//   {cd:"3", label:"太田区"},
-//   {cd:"4", label:"足立区"},
-//   {cd:"5", label:"江戸川区"}
-// );
-// array["osaka"] = [
-//   {cd:"1", label:"大阪市"},
-//   {cd:"2", label:"堺市"},
-//   {cd:"3", label:"東大阪市"},
-//   {cd:"4", label:"枚方市"},
-//   {cd:"5", label:"豊中市"}
-// ];
-// array["kyoto"] = [
-//   {cd:"1", label:"京都市"},
-//   {cd:"2", label:"宇治市"},
-//   {cd:"3", label:"亀岡市"},
-//   {cd:"4", label:"舞鶴市"},
-//   {cd:"5", label:"城陽市"}
-// ];
-// array["aichi"] = [
-//   {cd:"1", label:"名古屋市"},
-//   {cd:"2", label:"豊田市"},
-//   {cd:"3", label:"一宮市"},
-//   {cd:"4", label:"豊橋市"},
-//   {cd:"5", label:"岡崎市"}
-// ];
-
-// document.getElementById('prefecture').onchange = function(){
-//   var city = document.getElementById('city');
-//   city.options.length = 0
-//   var changedPref = prefecture.value;
-//   for (let i = 0; i < array[changedPref].length; i++) {
-//     var op = document.createElement('option');
-//     var value = array[changedPref][i]
-//     op.value = value.cd;
-//     op.text = value.label;
-//     city.appendChild(op);
-//   }
-// }
