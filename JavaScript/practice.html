@@ -213,8 +213,8 @@
   </select><br>
   <input type="button" value="ボタン" onclick="cookArrange();"> -->
 
-  <hr>
-  <div>自習2</div>
+  <!-- <hr>
+  <div>学習2</div>
     <select id="material" onchange="materialChange();">
       <option value="1">1つえらんで</option>
       <option value="2">にく</option>
@@ -243,24 +243,46 @@
       <option value="15">トマト</option>
       <option value="16">じゃがいも</option>
     </select>
-  </form>
+  </form> -->
 
-  
+  <hr>
+  <div>学習3</div>
+  <div>通知設定</div><br>
+    <div>全体設定</div>
+      <div>
+        <label>
+          <input type="radio" id="no-overall" value="" name="overall" onchange="noticeOverallChange();">通知しない
+          <input type="radio" id="yes-overall" value="" name="overall" onchange="noticeOverallChange();">通知する
+        </label>
+      </div><br>
 
-  <!-- <input type="button" value="ボタン" onchange="materialButton();"> -->
+    <div>詳細設定</div>
+    <div>
+      <label>
+        <div>運営
+          <input type="radio" id="no-operation" value="" name="operation" onchange="noticeOperationChange();">通知しない
+          <input type="radio" id="yes-operation" value="" name="operation" onchange="noticeOperationChange();">通知する
+        </div>
+        <div>プライベート
+          <input type="radio" id="no-private" value="" name="private" onchange="noticePrivateChange();">通知しない
+          <input type="radio" id="yes-private" value="" name="private" onchange="noticePrivateChange();">通知する
+        </div>
+        <div>情報
+          <input type="radio" id="no-information" value="" name="information" onchange="noticeInformationChange();">通知しない
+          <input type="radio" id="yes-information" value="" name="information" onchange="noticeInformationChange();">通知する
+        </div>
+        <div>新着
+          <input type="radio" id="no-new-arrival" value="" name="arrival" onchange="noticeArrivalChange();">通知しない
+          <input type="radio" id="yes-new-arrival" value="" name="arrival" onchange="noticeArrivalChange();">通知する
+        </div>
+        <div>注目
+          <input type="radio" id="no-attention" value="" name="attention" onchange="noticeAttentionChange();">通知しない
+          <input type="radio" id="yes-attention" value="" name="attention" onchange="noticeAttentionChange();">通知する
+        </div>
+      </label>
+    </div><br>
 
-  <!-- サンプルコード -->
-  <!-- <select id="prefecture">
-    <option value="">選択してください</option>
-    <option value="tokyo">東京都</option>
-    <option value="osaka">大阪府</option>
-    <option value="kyoto">京都府</option>
-    <option value="aichi">愛知県</option>
-  </select>
-
-  <select id="city">
-    <option value="">選択してください</option>
-  </select> -->
+    <input type="button" id="notice-keep-button" value="変更を保存" onclick="noticeKeepButton();">
 
   <script src="practice.js"></script>
 </body>
