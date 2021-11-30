@@ -533,7 +533,30 @@
 // 学習3_通知設定（ラジオボタン）側のHTML作成
 // 学習4_
 
-手順
-①親プルダウンの親要素を取得
-②親プルダウンのvalue属性を代入
-③if文を使用して、親プルダウンの指定したvalue属性を選択したき、表示、非表示
+// 手順
+// ①親プルダウンの親要素を取得
+// ②親プルダウンのvalue属性を代入
+// ③if文を使用して、親プルダウンの指定したvalue属性を選択したき、表示、非表示
+
+let overallBoxElm = document.getElementById('overall-box');
+overallBoxElm.style.display = '';
+
+let detailBoxElm = document.getElementById('detail-box');
+detailBoxElm.style.display = 'none';
+
+function changeSettings(){
+  let globalSettingsElm = document.getElementById('global-settings');
+  let globalSettingsVal = globalSettingsElm.value;
+  
+  let advancedSettingElm = document.getElementById('advanced-setting');
+  let advancedSettingVal = advancedSettingElm.value;
+
+  if (globalSettingsVal == '1') {
+    overallBoxElm.style.display = '';
+    detailBoxElm.style.display = 'none';
+  } else if (advancedSettingVal == '2') {
+    overallBoxElm.style.display = 'none';
+    detailBoxElm.style.display = '';
+  } 
+
+};
