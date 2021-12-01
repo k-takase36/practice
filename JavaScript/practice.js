@@ -531,7 +531,7 @@
 // };
 
 // 学習3_通知設定（ラジオボタン）側のHTML作成
-// 学習4_
+// 学習4_通知設定（ラジオボタン）側のJS作成
 
 // 手順
 // ①親プルダウンの親要素を取得
@@ -544,19 +544,20 @@ overallBoxElm.style.display = '';
 let detailBoxElm = document.getElementById('detail-box');
 detailBoxElm.style.display = 'none';
 
-function changeSettings(){
-  let globalSettingsElm = document.getElementById('global-settings');
-  let globalSettingsVal = globalSettingsElm.value;
-  
-  let advancedSettingElm = document.getElementById('advanced-setting');
-  let advancedSettingVal = advancedSettingElm.value;
+function changeGlobalSetting(){
+  let overallBoxElm = document.getElementById('overall-box');
+  let detailBoxElm = document.getElementById('detail-box');
 
-  if (globalSettingsVal == '1') {
-    overallBoxElm.style.display = '';
-    detailBoxElm.style.display = 'none';
-  } else if (advancedSettingVal == '2') {
-    overallBoxElm.style.display = 'none';
-    detailBoxElm.style.display = '';
-  } 
+  overallBoxElm.style.display = '';
+  detailBoxElm.style.display = 'none';
+  
+};
+
+function changeAdvancedSetting(){
+  let overallBoxElm = document.getElementById('overall-box');
+  let detailBoxElm = document.getElementById('detail-box');
+
+  overallBoxElm.style.display = 'none';
+  detailBoxElm.style.display = '';
 
 };

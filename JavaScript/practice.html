@@ -78,7 +78,7 @@
   </label> -->
 
   <!-- 復習：ボタンをクリックしたら、テキスト文字の色が変わる -->
-  <!-- <div id="textColor">色が変わる</div>
+  <!-- <div id="textColor">色が変わる</div>
   <input type="button" id="triggerButton" value="変更ボタン">
   <input type="button" id="changeButton" value="戻るボタン"> -->
 
@@ -247,44 +247,42 @@
 
   <hr>
   <div>学習3</div>
-    <div>通知設定</div><br>
-      <div>
-        <select id="global-settings" onchange="changeSettings();">
-            <option value="1">全体設定</option>
-        </select>
+    <div>通知設定</div>
+    <div></div>
+    <br>
+      <div>全体設定
+        <input type="button" value="ボタン" id="global-setting" onclick="changeGlobalSetting();">
       </div>
         <div id="overall-box">
           <label>
-            <input type="radio" id="no-overall" value="" name="overall" onchange="noticeOverallChange();">通知しない
-            <input type="radio" id="yes-overall" value="" name="overall" onchange="noticeOverallChange();" checked>通知する
+            <input type="radio" id="no-overall" value="" name="overall">通知しない
+            <input type="radio" id="yes-overall" value="" name="overall" checked>通知する
           </label>
         </div>
-      <div>
-        <select id="advanced-setting" onchange="changeSettings();">
-          <option value="2">詳細設定</option>
-        </select>
+      <div>詳細設定
+        <input type="button" value="ボタン" id="advanced-setting" onclick="changeAdvancedSetting();">
       </div>
         <div id="detail-box">
           <label>
             <div>運営
-              <input type="radio" id="no-operation" value="" name="operation" onchange="noticeOperationChange();">通知しない
-              <input type="radio" id="yes-operation" value="" name="operation" onchange="noticeOperationChange();" checked>通知する
+              <input type="radio" id="no-operation" value="" name="operation">通知しない
+              <input type="radio" id="yes-operation" value="" name="operation" checked>通知する
             </div>
             <div>プライベート
-              <input type="radio" id="no-private" value="" name="private" onchange="noticePrivateChange();">通知しない
-              <input type="radio" id="yes-private" value="" name="private" onchange="noticePrivateChange();" checked>通知する
+              <input type="radio" id="no-private" value="" name="private">通知しない
+              <input type="radio" id="yes-private" value="" name="private" checked>通知する
             </div>
             <div>情報
-              <input type="radio" id="no-information" value="" name="information" onchange="noticeInformationChange();">通知しない
-              <input type="radio" id="yes-information" value="" name="information" onchange="noticeInformationChange();" checked>通知する
+              <input type="radio" id="no-information" value="" name="information">通知しない
+              <input type="radio" id="yes-information" value="" name="information" checked>通知する
             </div>
             <div>新着
-              <input type="radio" id="no-new-arrival" value="" name="arrival" onchange="noticeArrivalChange();">通知しない
-              <input type="radio" id="yes-new-arrival" value="" name="arrival" onchange="noticeArrivalChange();" checked>通知する
+              <input type="radio" id="no-new-arrival" value="" name="arrival">通知しない
+              <input type="radio" id="yes-new-arrival" value="" name="arrival" checked>通知する
             </div>
             <div>注目
-              <input type="radio" id="no-attention" value="" name="attention" onchange="noticeAttentionChange();">通知しない
-              <input type="radio" id="yes-attention" value="" name="attention" onchange="noticeAttentionChange();" checked>通知する
+              <input type="radio" id="no-attention" value="" name="attention">通知しない
+              <input type="radio" id="yes-attention" value="" name="attention" checked>通知する
             </div>
           </label>
         </div>
