@@ -15,19 +15,31 @@
 // ⑨追加する要素⑧に、A子要素のtext、valueを設定（追加）
 // ⑩B親要素のindex「0」の下に指定して、⑧子要素を追加
 
+// document.querySelector('cookA') 使うと良い
+
 function cookChange() {
   let cookAElm = document.getElementById('cookA');
   let cookChildAElms = cookAElm.children;
   let cookBElm = document.getElementById('cookB');
   let cookChildBElms = cookBElm.children;
 
-  for (let i=3; i<cookChildAElms.length; i--) {
-    if (i == 0) {
-      break;
-    }
+  // cookChildAElmsを入れ替える処理
+  
+  // for文をi=0 i++に
+  for (let i=1; i<cookChildAElms.length; i++) {
+    // if (i == 0) {
+    //   break;
+    // }
     let addElm = document.createElement('option');
     addElm.text = cookChildAElms[i].text;
     addElm.value = cookChildAElms[i].value;
+    let addChildElms = addElm.children;
+
+    for (let i=1; i<addChildElms.length; i++) {
+      addElm.insertBefore(addChildElms[i], addChildElms[0]);
+    }
+    // cosole.log(addElm);
+
     cookBElm.insertBefore(addElm, cookChildBElms[1]);
   }
 
