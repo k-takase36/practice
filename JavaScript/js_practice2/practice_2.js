@@ -38,7 +38,6 @@ function cookChange() {
     for (let i=1; i<addChildElms.length; i++) {
       addElm.insertBefore(addChildElms[i], addChildElms[0]);
     }
-    // cosole.log(addElm);
 
     cookBElm.insertBefore(addElm, cookChildBElms[1]);
   }
