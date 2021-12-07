@@ -24,22 +24,25 @@ function cookChange() {
   let cookChildBElms = cookBElm.children;
 
   // cookChildAElmsを入れ替える処理
+  // for (let i = 1; i < cookChildAElms.length; i++) {
+  //   cookAElm.insertBefore(cookChildAElms[i], cookChildAElms[0]);
+  // }
+  let addElm = document.createElement('option');
+  addElm.text = cookChildAElms[i].text;
+  addElm.value = cookChildAElms[i].value;
+  let addChildElms = addElm.children;
+  for (let i=1; i<addChildElms.length; i++) {
+    addElm.insertBefore(addChildElms[i], addChildElms[0]);
+  }
   
   // for文をi=0 i++に
   for (let i=1; i<cookChildAElms.length; i++) {
     // if (i == 0) {
-    //   break;
-    // }
-    let addElm = document.createElement('option');
-    addElm.text = cookChildAElms[i].text;
-    addElm.value = cookChildAElms[i].value;
-    let addChildElms = addElm.children;
+      //     break;
+      //   }    
+      
 
-    for (let i=1; i<addChildElms.length; i++) {
-      addElm.insertBefore(addChildElms[i], addChildElms[0]);
+      cookBElm.insertBefore(addElm, cookChildBElms[1]);
     }
-
-    cookBElm.insertBefore(addElm, cookChildBElms[1]);
-  }
 
 };
