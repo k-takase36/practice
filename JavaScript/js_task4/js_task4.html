@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_task4</title>
+</head>
+<body>
+  <!-- ◆課題4
+  ◆プルダウンを「あ」「か」選択すると、選択したプルダウンのテキスト「あいう」「かきく」が表示する -->
+
+  <!-- 方法_1（表示、非表示の切替：display） -->
+  <!-- <label>
+    <input type="radio" id="aRadio" name="btnChange" onchange="changeRadio()">あ
+  </label>
+  <label>
+    <input type="radio" id="kaRadio" name="btnChange" onchange="changeRadio()">か
+  </label>
+
+  <div id="a">あいう</div>
+  <div id="ka">かきく</div> -->
+
+  <!-- 方法_2（表示、非表示の切替：textContent） -->
+  <!-- <label>
+    <input type="radio" id="aRadio" name="btnChange" onchange="changeRadio()">あ
+  </label>
+  <label>
+    <input type="radio" id="kaRadio" name="btnChange" onchange="changeRadio()">か
+  </label>
+
+  <div id="a">あいう</div>
+  <div id="ka">かきく</div> -->
+
+  <!-- 方法_3（value値の書き換え） -->
+  <label>
+    <input type="radio" name="btnChange" value="あいう" onchange="changeRadio(this.value)">あ
+  </label>
+  <label>
+    <input type="radio" name="btnChange" value="かきく" onchange="changeRadio(this.value)">か
+  </label>
+
+  <div id="txt"></div>
+  
+  <script src="js_task4.js"></script>
+</body>
+</html>

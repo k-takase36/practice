@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_task1</title>
+</head>
+<body>
+
+  <!-- <input type="text" id="taka" value="aaa" /><br/>
+  <input type="text" id="seko" value="" style="border: 2px solid;" />
+  <hr /> -->
+
+  <!-- 課題1：ボタンクリックしたら、プルダウンAの項目がプルダウンBへ追加される -->
+
+  <!-- ①Aのプルダウン -->
+  <select name="categoryA" id="categoryA" style="border-color: aqua;">
+  <option value="0">選択してください</option> 
+  <option value="1">あいう</option>
+  <option value="2">かきく</option>
+  <option value="3">さしす</option>
+  </select>
+
+  <!-- ②Bのプルダウン -->
+  <select name="categoryB" id="categoryB"> 
+  <option value="4">選択してください</option>
+  <option value="5">たちつ</option>
+  <option value="6">なにぬ</option>
+  <option value="7">はひふ</option>
+  </select>
+
+  <input type="button" value="ボタン" onclick="task1PullDown();"> 
+
+  <script src="js_task1.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_study4</title>
+</head>
+<body>
+
+  <!-- 学習4：通知設定（ラジオボタン）側のHTML作成  CPR
+  学習4：通知設定（ラジオボタン）側のJS作成 CPR -->
+
+  <div>学習4</div>
+    <div>通知設定</div>
+    <div></div>
+    <br>
+      <div>全体設定
+        <input type="button" value="ボタン" id="global-setting" onclick="changeGlobalSetting();">
+      </div>
+        <div id="overall-box">
+          <label>
+            <input type="radio" id="no-overall" value="" name="overall">通知しない
+            <input type="radio" id="yes-overall" value="" name="overall" checked>通知する
+          </label>
+        </div>
+      <div>詳細設定
+        <input type="button" value="ボタン" id="advanced-setting" onclick="changeAdvancedSetting();">
+      </div>
+        <div id="detail-box">
+          <label>
+            <div>運営
+              <input type="radio" id="no-operation" value="" name="operation">通知しない
+              <input type="radio" id="yes-operation" value="" name="operation" checked>通知する
+            </div>
+            <div>プライベート
+              <input type="radio" id="no-private" value="" name="private">通知しない
+              <input type="radio" id="yes-private" value="" name="private" checked>通知する
+            </div>
+            <div>情報
+              <input type="radio" id="no-information" value="" name="information">通知しない
+              <input type="radio" id="yes-information" value="" name="information" checked>通知する
+            </div>
+            <div>新着
+              <input type="radio" id="no-new-arrival" value="" name="arrival">通知しない
+              <input type="radio" id="yes-new-arrival" value="" name="arrival" checked>通知する
+            </div>
+            <div>注目
+              <input type="radio" id="no-attention" value="" name="attention">通知しない
+              <input type="radio" id="yes-attention" value="" name="attention" checked>通知する
+            </div>
+          </label>
+        </div>
+    <br>
+
+    <input type="button" id="notice-keep-button" value="変更を保存" onclick="noticeKeepButton();">
+
+  <script src="js_study4.js"></script>
+</body>
+</html>

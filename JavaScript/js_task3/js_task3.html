@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_task3</title>
+</head>
+<body>
+
+  <!-- 課題3 プルダウンAの「あいう、かきく」を、プルダウンB「さしす、たちつ」の下部へ追加 -->
+
+  <div>課題3</div>
+  <!-- ①Aのプルダウン -->
+  <!-- select要素でプルダウンメニューを配置、option要素で選択肢を配置 -->
+  <select id="catA">
+    <option value="1">選択してください</option>
+    <option value="2">あいう</option>
+    <option value="3">かきく</option> 
+  </select>
+
+  <!-- ②Bのプルダウン -->
+  <select id="catB"> 
+    <option value="4">選択してください</option> 
+    <option value="5">さしす</option>
+    <option value="6">たちつ</option>
+  </select><br>
+
+  <input type="button" value="ボタン" onclick="createPullDown();">
+
+  <script src="js_task3.js"></script>
+</body>
+</html>

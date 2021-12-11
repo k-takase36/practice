@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_study3</title>
+</head>
+<body>
+  <!-- 学習3_ 親プルダウンの子要素を選択後、選択した子要素のプルダウンが表示
+  条件：子要素のプルダウンは初期状態は非表示、親プルダウンで選択された時に表示される仕様 -->
+
+  <div>学習3</div>
+    <select id="material" onchange="materialChange();">
+      <option value="1">1つえらんで</option>
+      <option value="2">にく</option>
+      <option value="3">さかな</option>
+      <option value="4">やさい</option>
+    </select>
+  
+  <form>
+    <select id="meat">
+      <option value="5" hidden>にく</option>
+      <option value="6">うし</option>
+      <option value="7">ぶた</option>
+      <option value="8">とり</option>
+    </select>
+    
+    <select id="fish">
+      <option value="9" hidden>さかな</option>
+      <option value="10">マグロ</option>
+      <option value="11">しゃけ</option>
+      <option value="12">シラス</option>
+    </select>
+    
+    <select id="vegetable">
+      <option value="13" hidden>やさい</option>
+      <option value="14">レタス</option>
+      <option value="15">トマト</option>
+      <option value="16">じゃがいも</option>
+    </select>
+  </form>
+
+  <script src="js_study3.js"></script>
+</body>
+</html>
