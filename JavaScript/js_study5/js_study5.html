@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js_study5</title>
+</head>
+<body>
+
+  <!-- 学習5_1：テキスト入力すると、入力したテキスト数をカウントする -->
+  <!-- 実装1：Pure JS（Vanilla JS） -->
+  <div>▼学習5_1</div>
+  <div>Pure JS（Vanilla JS）</div>
+  <input type="text" id="text" onkeyup="keyUpText()">
+  <div id ="count">0</div>
+
+  <!-- 実装2：イベントリスナーの実装 -->
+  <div>イベントリスナー</div>
+  <input type="text" id="text2">
+  <div id ="count2">0</div>
+  
+
+  <!-- 学習5_2：テキストエリアに入力すると、入力したテキスト数をカウントする -->
+  <hr>
+  <!-- 実装1：Pure JS（Vanilla JS） -->
+  <div>▼学習5_2</div>
+  <div>Pure JS（Vanilla JS）</div>
+  <textarea id="textarea" onkeyup="keyUpTextarea()"></textarea>
+  <div id ="countup">0</div>
+  
+  <!-- 実装2：イベントリスナーの実装 -->
+  <div>イベントリスナー</div>
+  <textarea id="textarea2"></textarea>
+  <div id ="countup2">0</div>
+
+  <script src="js_study5.js"></script>
+</body>
+</html>
